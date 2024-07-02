@@ -67,13 +67,15 @@ export default function Skill() {
                 </div>
                 <div className="grid grid-cols-3 gap-8 xl:grid-cols-6">
                     {dataBrand.map((item) => (
-                        <a
-                            key={item.id}
-                            href="#"
-                            className="flex justify-center items-center border border-solid border-gray-200 shadow-sm h-16 rounded-2xl"
-                        >
-                            <img src={item.image} alt={`Brand ${item.id}`} className='p-2'/>
-                        </a>
+                        <div key={item.id} className='w-full p-6 rounded-2xl border border-gray-200 hover:border-indigo-600 hover:bg-blue-50 transition-all duration-700 ease-in-out flex-col justify-start items-center gap-3 inline-flex'>
+                            <a
+
+                                href="#"
+                            >
+                                <img src={item.image} alt={`Brand ${item.id}`} />
+                            </a>
+                            <h5 className="text-center text-gray-900 text-base font-semibold leading-relaxed">Slack</h5>
+                        </div>
                     ))}
                 </div>
             </div>
