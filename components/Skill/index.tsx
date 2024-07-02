@@ -1,60 +1,79 @@
 import React from 'react'
-const dataBrand = [
+export type DataBrand = {
+    id: number;
+    image: string;
+    label: string;
+};
+const dataBrand: DataBrand[] = [
     {
         id: 1,
         image: '/images/skill/nextjs.svg',
+        label: "NextJs"
     },
     {
         id: 2,
         image: '/images/skill/react.svg',
+        label: "ReactJs"
     },
     {
         id: 3,
         image: '/images/skill/javascript.svg',
+        label: "Javascript"
     },
     {
         id: 4,
         image: '/images/skill/typescript.svg',
+        label: "Typecript"
     },
     {
         id: 5,
         image: '/images/skill/html.svg',
+        label: "Html"
     },
     {
         id: 6,
         image: '/images/skill/css.svg',
+        label: "Css"
     },
     {
         id: 7,
         image: '/images/skill/sass.svg',
+        label: "Sass"
     },
     {
         id: 8,
         image: '/images/skill/antd.svg',
+        label: "Ant Design"
     },
     {
         id: 9,
         image: '/images/skill/tailwind-css.svg',
+        label: "Tailwind Css"
     },
     {
         id: 10,
         image: '/images/skill/redux.svg',
+        label: "Redux"
     },
     {
         id: 11,
         image: '/images/skill/nodejs.svg',
+        label: "NodeJs"
     },
     {
         id: 12,
         image: '/images/skill/angular.svg',
+        label: "Angular"
     },
     {
         id: 13,
         image: '/images/skill/nodejs.svg',
+        label: "NextJs"
     },
     {
         id: 14,
         image: '/images/skill/nodejs.svg',
+        label: "NextJs"
     }
 ]
 export default function Skill() {
