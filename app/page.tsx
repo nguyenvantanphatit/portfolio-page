@@ -7,7 +7,7 @@ import Procedure from "@/components/Procedure";
 import BookingForm from "@/components/Booking/Booking";
 import Address from "@/components/Address";
 import Skill from "@/components/Skill";
-
+import Projects from "@/components/Projects"
 export const metadata: Metadata = {
   title: "ECHO MEDI Bác Sĩ Gia Đình",
   description: "ECHO MEDI Bác Sĩ Gia Đình",
@@ -34,6 +34,7 @@ export default function Home() {
   return (
     <main>
       <Skill />
+      <Projects /> 
       <Hero />
       <Service />
       <Procedure />

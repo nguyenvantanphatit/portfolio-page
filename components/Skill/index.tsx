@@ -65,16 +65,6 @@ const dataBrand: DataBrand[] = [
         image: '/images/skill/angular.svg',
         label: "Angular"
     },
-    {
-        id: 13,
-        image: '/images/skill/nodejs.svg',
-        label: "NextJs"
-    },
-    {
-        id: 14,
-        image: '/images/skill/nodejs.svg',
-        label: "NextJs"
-    }
 ]
 export default function Skill() {
     return (
@@ -84,16 +74,16 @@ export default function Skill() {
                     <span className="text-indigo-600 text-center font-medium mb-4 block">OUR PARTNERS</span>
                     <h1 className="text-4xl text-gray-900 text-center font-bold">We work with the best partners</h1>
                 </div>
-                <div className="grid grid-cols-3 gap-8 xl:grid-cols-6">
+                <div className="grid grid-cols-3 gap-4 xl:grid-cols-6">
                     {dataBrand.map((item) => (
-                        <div key={item.id} className='w-full p-6 rounded-2xl border border-gray-200 hover:border-indigo-600 hover:bg-blue-50 transition-all duration-700 ease-in-out flex-col justify-start items-center gap-3 inline-flex'>
+                        <div key={item.id} className='pt-2 w-full rounded-2xl border border-gray-200 hover:border-indigo-600 hover:bg-blue-50 transition-all duration-700 ease-in-out flex-col justify-start items-center inline-flex'>
                             <a
 
                                 href="#"
                             >
-                                <img src={item.image} alt={`Brand ${item.id}`} />
+                                <img src={item.image} alt={`Brand ${item.id}`} className='h-10 rounded-md'/>
                             </a>
-                            <h5 className="text-center text-gray-900 text-base font-semibold leading-relaxed">Slack</h5>
+                            <h5 className="text-center py-2 text-gray-900 text-base font-semibold leading-relaxed">{item.label}</h5>
                         </div>
                     ))}
                 </div>

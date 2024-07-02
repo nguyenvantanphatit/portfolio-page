@@ -25,7 +25,10 @@ const Slider = () => {
     setActive(active - 1 < 0 ? countItem - 1 : active - 1);
     setRotate(rotate - rotateAdd);
   };
-
+  const handleButtonClick = (index) => {
+    setActive(index);
+    setRotate(index * rotateAdd);
+  };
   return (
     <div className="slider">
       <div className="images" style={{ transform: `rotate(${rotate}deg)` }}>
@@ -34,7 +37,16 @@ const Slider = () => {
             <img src={src} alt="Slide" className='h-80 w-80 rounded-full' />
           </div>
         ))}
+        {images.map((_, index) => (
+          <button
+            key={index}
+            className="circle-button"
+            style={{ transform: `rotate(${index * rotateAdd}deg) translate(500px) rotate(-${index * rotateAdd}deg)` }}
+            onClick={() => handleButtonClick(index)}
+          ></button>
+        ))}
       </div>
+      
       <button id="prev" onClick={prevSlider} className='flex gap-2 items-center'><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M9.06147 18.1227L3.00012 12.0613L9.06147 6" stroke="black" stroke-width="null" stroke-linecap="round" stroke-linejoin="round" className="my-path"></path>
         <path d="M21 12.0615H3" stroke="black" stroke-width="null" stroke-linecap="round" className="my-path"></path>
