@@ -2,31 +2,59 @@ import React from 'react'
 const dataBrand = [
     {
         id: 1,
-        image: '/images/brand/brand-07.svg',
+        image: '/images/skill/nextjs.svg',
     },
     {
         id: 2,
-        image: '/images/brand/brand-08.svg',
+        image: '/images/skill/react.svg',
     },
     {
         id: 3,
-        image: '/images/brand/brand-09.svg',
+        image: '/images/skill/javascript.svg',
     },
     {
         id: 4,
-        image: '/images/brand/brand-10.svg',
+        image: '/images/skill/typescript.svg',
     },
     {
         id: 5,
-        image: '/images/brand/brand-11.svg',
+        image: '/images/skill/html.svg',
     },
     {
         id: 6,
-        image: '/images/brand/brand-12.svg',
+        image: '/images/skill/css.svg',
     },
     {
         id: 7,
-        image: '/images/brand/brand-07.svg',
+        image: '/images/skill/sass.svg',
+    },
+    {
+        id: 8,
+        image: '/images/skill/antd.svg',
+    },
+    {
+        id: 9,
+        image: '/images/skill/tailwind-css.svg',
+    },
+    {
+        id: 10,
+        image: '/images/skill/redux.svg',
+    },
+    {
+        id: 11,
+        image: '/images/skill/nodejs.svg',
+    },
+    {
+        id: 12,
+        image: '/images/skill/angular.svg',
+    },
+    {
+        id: 13,
+        image: '/images/skill/nodejs.svg',
+    },
+    {
+        id: 14,
+        image: '/images/skill/nodejs.svg',
     }
 ]
 export default function Skill() {
@@ -42,14 +70,13 @@ export default function Skill() {
                         <a
                             key={item.id}
                             href="#"
-                            className="flex justify-center items-center border border-solid border-gray-200 shadow-sm h-24 rounded-2xl"
+                            className="flex justify-center items-center border border-solid border-gray-200 shadow-sm h-16 rounded-2xl"
                         >
-                            <img src={item.image} alt={`Brand ${item.id}`} />
+                            <img src={item.image} alt={`Brand ${item.id}`} className='p-2'/>
                         </a>
                     ))}
                 </div>
             </div>
         </section>
-
     )
 }
