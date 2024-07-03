@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: '/images/banner/profile.png',
+        url: '/profile.png',
         width: 850,
         height: 650,
         alt: 'Tấn Phát Software Engineer'
