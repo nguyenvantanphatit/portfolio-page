@@ -19,54 +19,57 @@ const dataBrand: DataBrand[] = [
     },
     {
         id: 3,
-        image: '/images/skill/javascript.svg',
-        label: "Javascript"
+        image: '/images/skill/angular.svg',
+        label: "Angular"
     },
     {
         id: 4,
-        image: '/images/skill/typescript.svg',
-        label: "Typecript"
-    },
-    {
-        id: 5,
-        image: '/images/skill/html.svg',
-        label: "Html"
-    },
-    {
-        id: 6,
-        image: '/images/skill/css.svg',
-        label: "Css"
-    },
-    {
-        id: 7,
-        image: '/images/skill/sass.svg',
-        label: "Sass"
-    },
-    {
-        id: 8,
-        image: '/images/skill/antd.svg',
-        label: "Ant Design"
-    },
-    {
-        id: 9,
-        image: '/images/skill/tailwind-css.svg',
-        label: "Tailwind Css"
-    },
-    {
-        id: 10,
-        image: '/images/skill/redux.svg',
-        label: "Redux"
-    },
-    {
-        id: 11,
         image: '/images/skill/nodejs.svg',
         label: "NodeJs"
     },
     {
-        id: 12,
-        image: '/images/skill/angular.svg',
-        label: "Angular"
+        id: 5,
+        image: '/images/skill/typescript.svg',
+        label: "Typecript"
     },
+    {
+        id: 6,
+        image: '/images/skill/javascript.svg',
+        label: "Javascript"
+    },
+    
+    {
+        id: 7,
+        image: '/images/skill/html.svg',
+        label: "Html"
+    },
+    {
+        id: 8,
+        image: '/images/skill/css.svg',
+        label: "Css"
+    },
+    {
+        id: 9,
+        image: '/images/skill/sass.svg',
+        label: "Sass"
+    },
+    {
+        id: 10,
+        image: '/images/skill/antd.svg',
+        label: "Ant Design"
+    },
+    {
+        id: 11,
+        image: '/images/skill/tailwind-css.svg',
+        label: "Tailwind Css"
+    },
+    {
+        id: 12,
+        image: '/images/skill/redux.svg',
+        label: "Redux"
+    },
+  
+   
 ]
 export default function Skill() {
     return (
@@ -116,7 +119,7 @@ export default function Skill() {
                         {dataBrand.map((item) => (
                             <div key={item.id} className='pt-2 w-full rounded-2xl border border-gray-200 hover:border-indigo-600 hover:bg-blue-50 transition-all duration-700 ease-in-out flex-col justify-start items-center inline-flex'>
                                 <a href="#">
-                                    <img src={item.image} alt={`Brand ${item.id}`} className='h-10 rounded-md' />
+                                    <img src={item.image} alt={`Brand ${item.id}`} className='h-10 px-2 rounded-md' />
                                 </a>
                                 <h5 className="text-center py-2 text-gray-900 text-base font-semibold leading-relaxed ">{item.label}</h5>
                             </div>
