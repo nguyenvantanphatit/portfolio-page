@@ -3,21 +3,21 @@ import Skill from "@/components/Skill";
 import Projects from "@/components/Projects"
 import Contact from "@/components/Contact";
 export const metadata: Metadata = {
-  title: "ECHO MEDI Bác Sĩ Gia Đình",
-  description: "ECHO MEDI Bác Sĩ Gia Đình",
-  keywords: "bác sĩ, gia đình, y tế, chăm sóc sức khỏe",
-  authors: [{ name: "ECHO MEDI Team" }],
+  title: "Tấn Phát",
+  description: "Tấn Phát Software Engineer",
+  keywords: "Tấn Phát Software Engineer",
+  authors: [{ name: "Tấn Phát Team" }],
   openGraph: {
-    title: "ECHO MEDI",
-    description: "ECHO MEDI Bác Sĩ Gia Đình",
+    title: "Tấn Phát",
+    description: "Tấn Phát Software Engineer",
     url: "https://echomedi-page.vercel.app",
     type: "website",
     images: [
       {
-        url: 'https://api.echomedi.com/uploads/1_e78911f4ec.png',
+        url: '/images/banner/profile.png',
         width: 850,
         height: 650,
-        alt: 'ECHO MEDI Bác Sĩ Gia Đình'
+        alt: 'Tấn Phát Software Engineer'
       }
     ]
   },
