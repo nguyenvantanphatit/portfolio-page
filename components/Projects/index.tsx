@@ -147,7 +147,7 @@ export default function Projects() {
                                     className="animate_top group relative rounded-2xl border border-stroke bg-white shadow-solid-10 dark:border-strokedark dark:bg-blacksection dark:shadow-none"
                                 >
                                     <div className="block overflow-hidden h-1/2  rounded-t-2xl">
-                                        <img src={item.image} alt="Card image" className='h-full object-cover' />
+                                        <img src={item.image} alt="Card image" className='object-cover' />
                                     </div>
                                     <div className="p-4">
                                         <h4 className="text-base font-semibold text-gray-900 mb-[2px] capitalize transition-all duration-500">{item.label}</h4>
