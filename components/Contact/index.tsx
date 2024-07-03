@@ -4,7 +4,7 @@ import React from 'react'
 export default function Contact() {
     return (
         <>
-            <section className="w-full xl:py-24 lg:py-20 py-12 bg-slate-50 border-b border-gray-300">
+            <section className="w-full xl:py-24 lg:py-20 py-12 bg-slate-50 border-b border-gray-300" id="contact">
                 <div className="w-full max-w-7xl px-6 lg:px-8 mx-auto">
                     <div className="grid lg:grid-cols-2 grid-cols-1 gap-x-16 xl:gap-x-24 gap-y-14 max-w-lg md:max-w-3xl lg:max-w-full mx-auto">
                         <motion.div
