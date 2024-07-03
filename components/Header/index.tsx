@@ -15,6 +15,7 @@ const Header = () => {
                             I'm a Front-End Developer specializing in React.js, Next.js, and Angular with knowledge of Node.js.
                         </p>
                     </div>
+                    <div className="hidden md:block">
                     <button
                         className="py-3.5 px-5 flex rounded-full bg-indigo-600 items-center shadow-sm shadow-transparent transition-all duration-500 hover:bg-indigo-700">
                         <span className="px-2 font-semibold text-base leading-7 text-white">Send Message</span>
@@ -24,6 +25,8 @@ const Header = () => {
                                 stroke="white" stroke-width="1.6" stroke-linecap="round" />
                         </svg>
                     </button>
+                    </div>
+                   
                 </div>
                 <div className="flex max-sm:flex-wrap max-sm:justify-center items-center gap-4">
                     <a href="javascript:;" className="rounded-full py-3 px-6 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm leading-6 transition-all duration-500 ">About</a>
