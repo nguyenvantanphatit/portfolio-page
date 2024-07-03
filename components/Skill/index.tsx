@@ -68,7 +68,7 @@ const dataBrand: DataBrand[] = [
 ]
 export default function Skill() {
     return (
-        <section className="py-24 bg-slate-50 ">
+        <section className="py-14 bg-slate-50 ">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="mb-20 text-center">
                     <h1 className="text-4xl text-gray-900 text-center font-bold">Your Skills</h1>
