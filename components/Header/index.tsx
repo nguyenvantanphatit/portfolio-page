@@ -4,7 +4,7 @@ const Header = () => {
             <img src="/images/banner/banner.jpg" alt="cover-image" className="w-full absolute top-0 left-0 z-0 h-1/2" />
             <div className="w-full max-w-7xl mx-auto px-6 md:px-8">
                 <div className="flex items-center justify-center sm:justify-start relative z-10 mb-5">
-                    <img src="https://pagedone.io/asset/uploads/1705471668.png" alt="user-avatar-image"
+                    <img src="/images/banner/profile.png" alt="user-avatar-image"
                         className="border-4 border-solid border-white rounded-full" />
                 </div>
                 <div className="flex items-center justify-center flex-col sm:flex-row max-sm:gap-5 sm:justify-between mb-5">
