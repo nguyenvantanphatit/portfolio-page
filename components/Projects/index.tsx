@@ -1,4 +1,5 @@
-import Head from 'next/head';
+"use client";
+import { motion } from "framer-motion";
 import React from 'react'
 export type Projects = {
     id: number;
@@ -97,35 +98,75 @@ const projects: Projects[] = [
 export default function Projects() {
     return (
         <>
-            <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 bg-slate-50'>
-            <div className="text-center py-8">
-                    <h1 className="text-4xl text-gray-900 text-center font-bold">We work with the best partners</h1>
-                </div>
-                <div className="grid grid-cols-1 gap-6 xl:grid-cols-4">
-                    {projects.map((item) => (
-                        <div
-                            key={item.id}
-                            className="animate_top group relative rounded-3xl border border-stroke bg-white shadow-solid-10 dark:border-strokedark dark:bg-blacksection dark:shadow-none"
-                        >
-                            <div className="block overflow-hidden h-1/2  rounded-t-3xl">
-                                <img src={item.image} alt="Card image" className='h-full object-cover' />
-                            </div>
-                            <div className="p-4">
-                                <h4 className="text-base font-semibold text-gray-900 mb-[2px] capitalize transition-all duration-500">{item.label}</h4>
-                                <p className="text-sm font-normal text-gray-500 transition-all duration-500 leading-5 pb-2">{item.tech}</p>
-                                <div className='space-x-4 mb-8'>
-                                    {item.live_demo && (
-                                        <button className="bg-white rounded-full py-2 px-5 text-xs text-[#4F46FF] font-semibold border border-[#4F46FF]">
-                                            <a href={item.live_demo}>
-                                                Live Demo
-                                            </a>
-                                        </button>
-                                    )}
-                                    <button className="bg-indigo-600 shadow-sm rounded-full py-2 px-5 text-xs text-white font-semibold">Read More</button>
-                                </div>
-                            </div>
+            <div className='bg-slate-50'>
+                <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+                    <motion.div
+                        variants={{
+                            hidden: {
+                                opacity: 0,
+                                x: -20,
+                            },
+
+                            visible: {
+                                opacity: 1,
+                                x: 0,
+                            },
+                        }}
+                        initial="hidden"
+                        whileInView="visible"
+                        transition={{ duration: 1, delay: 0.1 }}
+                        viewport={{ once: true }}
+                        className="animate_left w-full"
+                    >
+                        <div className="text-center py-8">
+                            <h1 className="text-4xl text-gray-900 text-center font-bold">We work with the best partners</h1>
                         </div>
-                    ))}
+                    </motion.div>
+                    <motion.div
+                        variants={{
+                            hidden: {
+                                opacity: 0,
+                                x: 20,
+                            },
+
+                            visible: {
+                                opacity: 1,
+                                x: 0,
+                            },
+                        }}
+                        initial="hidden"
+                        whileInView="visible"
+                        transition={{ duration: 1, delay: 0.1 }}
+                        viewport={{ once: true }}
+                        className="animate_right w-full"
+                    >
+                        <div className="grid grid-cols-1 gap-6 xl:grid-cols-4">
+                            {projects.map((item) => (
+                                <div
+                                    key={item.id}
+                                    className="animate_top group relative rounded-2xl border border-stroke bg-white shadow-solid-10 dark:border-strokedark dark:bg-blacksection dark:shadow-none"
+                                >
+                                    <div className="block overflow-hidden h-1/2  rounded-t-2xl">
+                                        <img src={item.image} alt="Card image" className='h-full object-cover' />
+                                    </div>
+                                    <div className="p-4">
+                                        <h4 className="text-base font-semibold text-gray-900 mb-[2px] capitalize transition-all duration-500">{item.label}</h4>
+                                        <p className="text-sm font-normal text-gray-500 transition-all duration-500 leading-5 pb-2">{item.tech}</p>
+                                        <div className='space-x-4 mb-8'>
+                                            {item.live_demo && (
+                                                <button className="bg-white rounded-full py-2 px-5 text-xs text-[#4F46FF] font-semibold border border-[#4F46FF]">
+                                                    <a href={item.live_demo}>
+                                                        Live Demo
+                                                    </a>
+                                                </button>
+                                            )}
+                                            <button className="bg-indigo-600 shadow-sm rounded-full py-2 px-5 text-xs text-white font-semibold">Read More</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </motion.div>
                 </div>
             </div>
         </>

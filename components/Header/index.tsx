@@ -1,7 +1,7 @@
 const Header = () => {
     return (
         <section className="relative pt-40 pb-10 bg-slate-50 ">
-            <img src="https://pagedone.io/asset/uploads/1705473908.png" alt="cover-image" className="w-full absolute top-0 left-0 z-0 h-60" />
+            <img src="/images/banner/banner.jpg" alt="cover-image" className="w-full absolute top-0 left-0 z-0 h-1/2" />
             <div className="w-full max-w-7xl mx-auto px-6 md:px-8">
                 <div className="flex items-center justify-center sm:justify-start relative z-10 mb-5">
                     <img src="https://pagedone.io/asset/uploads/1705471668.png" alt="user-avatar-image"
