@@ -1,150 +1,38 @@
-"use client";
-import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
-
-import menuData from "./menuData";
-
 const Header = () => {
-  const [navigationOpen, setNavigationOpen] = useState(false);
-  const [stickyMenu, setStickyMenu] = useState(false);
+    return (
+        <section className="relative pt-40 pb-24">
+            <img src="https://pagedone.io/asset/uploads/1705473908.png" alt="cover-image" className="w-full absolute top-0 left-0 z-0 h-60" />
+            <div className="w-full max-w-7xl mx-auto px-6 md:px-8">
+                <div className="flex items-center justify-center sm:justify-start relative z-10 mb-5">
+                    <img src="https://pagedone.io/asset/uploads/1705471668.png" alt="user-avatar-image"
+                        className="border-4 border-solid border-white rounded-full" />
+                </div>
+                <div className="flex items-center justify-center flex-col sm:flex-row max-sm:gap-5 sm:justify-between mb-5">
+                    <div className="block">
+                        <h3 className="font-manrope font-bold text-4xl text-gray-900 mb-1 max-sm:text-center">Tan Phat</h3>
+                        <p className="font-normal text-base leading-7 text-gray-500  max-sm:text-center">Welcome to my space! My name is  Nguyen Van Tan Phat.
+                            <br className="hidden sm:block"></br>
+                            I'm a Front-End Developer specializing in React.js, Next.js, and Angular with knowledge of Node.js.
+                        </p>
+                    </div>
+                    <button
+                        className="py-3.5 px-5 flex rounded-full bg-indigo-600 items-center shadow-sm shadow-transparent transition-all duration-500 hover:bg-indigo-700">
+                        <span className="px-2 font-semibold text-base leading-7 text-white">Send Message</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11.3011 8.69881L8.17808 11.8219M8.62402 12.5906L8.79264 12.8819C10.3882 15.6378 11.1859 17.0157 12.2575 16.9066C13.3291 16.7974 13.8326 15.2869 14.8397 12.2658L16.2842 7.93214C17.2041 5.17249 17.6641 3.79266 16.9357 3.0643C16.2073 2.33594 14.8275 2.79588 12.0679 3.71577L7.73416 5.16033C4.71311 6.16735 3.20259 6.67086 3.09342 7.74246C2.98425 8.81406 4.36221 9.61183 7.11813 11.2074L7.40938 11.376C7.79182 11.5974 7.98303 11.7081 8.13747 11.8625C8.29191 12.017 8.40261 12.2082 8.62402 12.5906Z"
+                                stroke="white" stroke-width="1.6" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                </div>
+                <div className="flex max-sm:flex-wrap max-sm:justify-center items-center gap-4">
+                    <a href="javascript:;" className="rounded-full py-3 px-6 bg-stone-100 text-gray-700 font-semibold text-sm leading-6 transition-all duration-500 hover:bg-stone-200 hover:text-gray-900">About</a>
+                    <a href="javascript:;" className="rounded-full py-3 px-6 bg-stone-100 text-gray-700 font-semibold text-sm leading-6 transition-all duration-500 hover:bg-stone-200 hover:text-gray-900">Skills</a>
+                    <a href="javascript:;" className="rounded-full py-3 px-6 bg-stone-100 text-gray-700 font-semibold text-sm leading-6 transition-all duration-500 hover:bg-stone-200 hover:text-gray-900">Projects</a>
+                </div>
+            </div>
+        </section>
 
-  const pathUrl = usePathname();
-
-  const handleStickyMenu = () => {
-    if (window.scrollY >= 80) {
-      setStickyMenu(true);
-    } else {
-      setStickyMenu(false);
-    }
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", handleStickyMenu);
-  });
-
-  const handleScroll = (path) => {
-    const elementId = path.split('#')[1];
-    if (elementId) {
-      const element = document.getElementById(elementId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'end' });
-      }
-    }
-  };
-
-  const handleClick = (e, path) => {
-    e.preventDefault();
-    const currentPath = window.location.pathname;
-    if (currentPath === path.split('#')[0]) {
-      handleScroll(path);
-    } else {
-      window.location.href = path;
-    }
-  };
-  return (
-    <header
-      className={`fixed left-0 top-0 z-99999 w-full py-7 ${stickyMenu
-        ? "bg-white !py-4 shadow transition duration-100 dark:bg-black"
-        : ""
-        }`}
-    >
-      <div className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
-        <div className="flex w-full items-center justify-between xl:w-1/4">
-          <a href="/#home">
-            <Image
-              src="https://d3e4m6b6rxmux9.cloudfront.net/LOGO_ECHOMEDI_vpp_ver_VN_270cdb062c.png?updated_at=2023-07-24T02:12:46.403Z"
-              alt="logo"
-              width={119.03}
-              height={30}
-              className="hidden w-full dark:block h-14"
-            />
-            <Image
-              src="https://d3e4m6b6rxmux9.cloudfront.net/LOGO_ECHOMEDI_vpp_ver_VN_270cdb062c.png?updated_at=2023-07-24T02:12:46.403Z"
-              alt="logo"
-              width={119.03}
-              height={30}
-              className="w-full dark:hidden  h-14"
-            />
-          </a>
-
-          {/* <!-- Hamburger Toggle BTN --> */}
-          <button
-            aria-label="hamburger Toggler"
-            className="block xl:hidden"
-            onClick={() => setNavigationOpen(!navigationOpen)}
-          >
-            <span className="relative block h-5.5 w-5.5 cursor-pointer">
-              <span className="absolute right-0 block h-full w-full">
-                <span
-                  className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-black delay-[0] duration-200 ease-in-out dark:bg-white ${!navigationOpen ? "!w-full delay-300" : "w-0"
-                    }`}
-                ></span>
-                <span
-                  className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-black delay-150 duration-200 ease-in-out dark:bg-white ${!navigationOpen ? "delay-400 !w-full" : "w-0"
-                    }`}
-                ></span>
-                <span
-                  className={`relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-black delay-200 duration-200 ease-in-out dark:bg-white ${!navigationOpen ? "!w-full delay-500" : "w-0"
-                    }`}
-                ></span>
-              </span>
-              <span className="du-block absolute right-0 h-full w-full rotate-45">
-                <span
-                  className={`absolute left-2.5 top-0 block h-full w-0.5 rounded-sm bg-black delay-300 duration-200 ease-in-out dark:bg-white ${!navigationOpen ? "!h-0 delay-[0]" : "h-full"
-                    }`}
-                ></span>
-                <span
-                  className={`delay-400 absolute left-0 top-2.5 block h-0.5 w-full rounded-sm bg-black duration-200 ease-in-out dark:bg-white ${!navigationOpen ? "!h-0 delay-200" : "h-0.5"
-                    }`}
-                ></span>
-              </span>
-            </span>
-          </button>
-          {/* <!-- Hamburger Toggle BTN --> */}
-        </div>
-
-        {/* Nav Menu Start   */}
-        <div
-          className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${navigationOpen &&
-            "navbar !visible mt-4 h-auto max-h-[400px] rounded-md bg-white p-7.5 shadow-solid-5 dark:bg-blacksection xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
-            }`}
-        >
-          <nav>
-            <ul className="flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10">
-              {menuData.map((menuItem, key) => (
-                <li key={key} className={"group relative"}>
-                  <a
-                    onClick={(e) => handleClick(e, menuItem.path)}
-                    href={`${menuItem.path}`}
-                    className={
-                      pathUrl === menuItem.path
-                        ? "text-black hover:text-primary"
-                        : "hover:text-primary"
-                    }
-                  >
-                    {menuItem.title}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-
-          <div className="mt-7 flex items-center gap-6 xl:mt-0">
-            <a
-              onClick={(e) => handleClick(e, "/#contact")}
-              href="#contact"
-              className="flex items-center justify-center rounded-full  px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out  hover:bg-green-700 hover:shadow-lg focus:bg-green-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-700 active:shadow-lg transition  bg-green-800"
-            >
-              Đặt Lịch Khám
-            </a>
-          </div>
-        </div>
-      </div>
-    </header>
-  );
+    );
 };
-
-// w-full delay-300
-
 export default Header;
