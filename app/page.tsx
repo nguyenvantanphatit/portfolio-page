@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: 'https://res.cloudinary.com/dq49gyq1g/image/upload/f_auto,q_auto/hlptmil0sqkhntsnjm05',
+        url: 'https://res.cloudinary.com/dq49gyq1g/image/upload/v1720019456/profile_u2e30a.png',
         width: 850,
         height: 650,
         alt: 'Tấn Phát Software Engineer'
