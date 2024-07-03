@@ -68,7 +68,7 @@ export default function Contact() {
                                     </div>
                                 </div>
                                 <div className="border-t border-slate-200 pt-12 flex lg:justify-start justify-center">
-                                    <span className="w-2 h-2 inline-block bg-gray-900 rounded-full mr-2"></span>
+                                    <span className="w-3 h-3 inline-block bg-gray-900 rounded-full mr-2"></span>
                                     <span className="w-3 h-3 inline-block bg-gray-500 rounded-full mr-2"></span>
                                     <span className="w-3 h-3 inline-block bg-red-600 rounded-full mr-2"></span>
                                     <span className="w-3 h-3 inline-block bg-yellow-500 rounded-full mr-2"></span>
@@ -78,6 +78,15 @@ export default function Contact() {
                                     <span className="w-3 h-3 inline-block bg-purple-500 rounded-full mr-2"></span>
                                     <span className="w-3 h-3 inline-block bg-orange-500 rounded-full mr-2"></span>
                                     <span className="w-3 h-3 inline-block bg-pink-500 rounded-full mr-2"></span>
+                                    <span className="w-3 h-3 inline-block bg-gray-900 rounded-full mr-2"></span>
+                                    <span className="w-3 h-3 inline-block bg-gray-500 rounded-full mr-2"></span>
+                                    <span className="w-3 h-3 inline-block bg-red-600 rounded-full mr-2"></span>
+                                    <span className="w-3 h-3 inline-block bg-yellow-500 rounded-full mr-2"></span>
+                                    <span className="w-3 h-3 inline-block bg-green-500 rounded-full mr-2"></span>
+                                    <span className="w-3 h-3 inline-block bg-blue-500 rounded-full mr-2"></span>
+                                    <span className="w-3 h-3 inline-block bg-indigo-600 rounded-full mr-2"></span>
+                                    <span className="w-3 h-3 inline-block bg-purple-500 rounded-full mr-2"></span>
+                                    <span className="w-3 h-3 inline-block bg-orange-500 rounded-full mr-2"></span>
                                 </div>
                             </div>
                         </motion.div>
