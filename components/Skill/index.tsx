@@ -68,22 +68,18 @@ const dataBrand: DataBrand[] = [
 ]
 export default function Skill() {
     return (
-        <section className="py-24 ">
+        <section className="py-24 bg-slate-50 ">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="mb-20 text-center">
-                    <span className="text-indigo-600 text-center font-medium mb-4 block">OUR PARTNERS</span>
-                    <h1 className="text-4xl text-gray-900 text-center font-bold">We work with the best partners</h1>
+                    <h1 className="text-4xl text-gray-900 text-center font-bold">Your Skills</h1>
                 </div>
                 <div className="grid grid-cols-3 gap-4 xl:grid-cols-6">
                     {dataBrand.map((item) => (
                         <div key={item.id} className='pt-2 w-full rounded-2xl border border-gray-200 hover:border-indigo-600 hover:bg-blue-50 transition-all duration-700 ease-in-out flex-col justify-start items-center inline-flex'>
-                            <a
-
-                                href="#"
-                            >
+                            <a href="#">
                                 <img src={item.image} alt={`Brand ${item.id}`} className='h-10 rounded-md'/>
                             </a>
-                            <h5 className="text-center py-2 text-gray-900 text-base font-semibold leading-relaxed">{item.label}</h5>
+                            <h5 className="text-center py-2 text-gray-900 text-base font-semibold leading-relaxed ">{item.label}</h5>
                         </div>
                     ))}
                 </div>
