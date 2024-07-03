@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React from 'react'
 export type Projects = {
     id: number;
@@ -13,7 +14,7 @@ export type Projects = {
 const projects: Projects[] = [
     {
         id: 1,
-        image: '/images/skill/nextjs.svg',
+        image: '/images/projects/echomedi.png',
         label: "Echo Medi Website",
         time: "02/2024 - 2024",
         tech: "NextJs, NodeJs, Mysql, Tailwind CSS",
@@ -25,7 +26,7 @@ const projects: Projects[] = [
     },
     {
         id: 1,
-        image: '/images/skill/nextjs.svg',
+        image: '/images/projects/echomedi-blog.png',
         label: "Echo Medi Blog",
         time: "02/2024 - 2024",
         tech: "NextJs, NodeJs, Mysql, Tailwind CSS",
@@ -37,7 +38,7 @@ const projects: Projects[] = [
     },
     {
         id: 1,
-        image: '/images/skill/nextjs.svg',
+        image: '/images/projects/echomedi.png',
         label: "Wheel Of Fortune",
         time: "02/2024 - 2024",
         tech: "NextJs, Tailwind CSS",
@@ -49,7 +50,7 @@ const projects: Projects[] = [
     },
     {
         id: 2,
-        image: '/images/skill/react.svg',
+        image: '/images/projects/echomedi.png',
         label: "Luna Project",
         time: "11/2023 - 1/2024",
         tech: "ReactJs, NodeJs, Mysql, Antd",
@@ -60,7 +61,7 @@ const projects: Projects[] = [
     },
     {
         id: 3,
-        image: '/images/skill/javascript.svg',
+        image: '/images/projects/dohbo.png',
         label: "Dohbo Janpan",
         time: "08/2023 - 10/2023",
         tech: "Angular, Antd",
@@ -71,7 +72,7 @@ const projects: Projects[] = [
     },
     {
         id: 4,
-        image: '/images/skill/typescript.svg',
+        image: '/images/projects/vjp-connect-platform.png',
         label: "VJP Connect Platform",
         time: "06/2023 - 07/2023",
         tech: "ReactJs, NodeJs, Mysql, Antd",
@@ -83,7 +84,7 @@ const projects: Projects[] = [
     },
     {
         id: 5,
-        image: '/images/skill/html.svg',
+        image: '/images/projects/echomedi.png',
         label: "Portfolio Page",
         time: "07/2024",
         tech: "NextJs, Tailwind CSS",
@@ -103,13 +104,13 @@ export default function Projects() {
                             key={item.id}
                             className="animate_top group relative rounded-lg border border-stroke bg-white shadow-solid-10 dark:border-strokedark dark:bg-blacksection dark:shadow-none"
                         >
-                            <div className="block overflow-hidden">
-                                <img src="https://pagedone.io/asset/uploads/1695365240.png" alt="Card image" />
+                            <div className="block overflow-hidden h-1/2">
+                                <img src={item.image} alt="Card image" className='h-full object-cover' />
                             </div>
                             <div className="p-4">
                                 <h4 className="text-base font-semibold text-gray-900 mb-2 capitalize transition-all duration-500">{item.label}</h4>
-                                <p className="text-sm font-normal text-gray-500 transition-all duration-500 leading-5 mb-5">{item.tech}</p>
-                                <div className='space-x-4'>
+                                <p className="text-sm font-normal text-gray-500 transition-all duration-500 leading-5 pb-2">{item.tech}</p>
+                                <div className='space-x-4 mb-8'>
                                     {item.live_demo && (
                                         <button className="bg-indigo-600 shadow-sm rounded-full py-2 px-5 text-xs text-white font-semibold">
                                             <a href={item.live_demo}>
