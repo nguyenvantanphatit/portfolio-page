@@ -17,7 +17,7 @@ export default function Contact() {
                                         </svg>
                                     </a>
                                     <h5 className="text-gray-900 text-xl font-semibold leading-8 mb-3 transition-all duration-500 group-hover:text-white">Support</h5>
-                                    <p className="text-gray-500 text-sm font-normal leading-5 transition-all duration-500 group-hover:text-white">We Provide Various Methods For You To Carry Out All Transactions Related To Your Finances</p>
+                                    <p className="text-gray-500 text-sm font-normal leading-5 transition-all duration-500 group-hover:text-white">We Provide Various Methods For You To Carry Out All</p>
                                 </div>
                                 <div className="rounded-2xl border border-gray-200 bg-white p-7 group transition-all duration-500 hover:bg-indigo-600">
                                     <a href="javascript:;" className="w-14 h-14 bg-indigo-600 rounded-full flex items-center justify-center mb-5 transition-all duration-500 group-hover:bg-white cursor-pointer">
@@ -26,10 +26,20 @@ export default function Contact() {
                                         </svg>
                                     </a>
                                     <h5 className="text-gray-900 text-xl font-semibold leading-8 mb-3 transition-all duration-500 group-hover:text-white">Pagedone Blog</h5>
-                                    <p className="text-gray-500 text-sm font-normal leading-5 transition-all duration-500 group-hover:text-white">We have the most up-to-date security to support the security of all our customers in carrying out all transactions. </p>
+                                    <p className="text-gray-500 text-sm font-normal leading-5 transition-all duration-500 group-hover:text-white"></p>
                                 </div>
                             </div>
                             <div className="border-t border-slate-200 pt-12 flex lg:justify-start justify-center">
+                                <span className="w-2 h-2 inline-block bg-gray-900 rounded-full mr-2"></span>
+                                <span className="w-3 h-3 inline-block bg-gray-500 rounded-full mr-2"></span>
+                                <span className="w-3 h-3 inline-block bg-red-600 rounded-full mr-2"></span>
+                                <span className="w-3 h-3 inline-block bg-yellow-500 rounded-full mr-2"></span>
+                                <span className="w-3 h-3 inline-block bg-green-500 rounded-full mr-2"></span>
+                                <span className="w-3 h-3 inline-block bg-blue-500 rounded-full mr-2"></span>
+                                <span className="w-3 h-3 inline-block bg-indigo-600 rounded-full mr-2"></span>
+                                <span className="w-3 h-3 inline-block bg-purple-500 rounded-full mr-2"></span>
+                                <span className="w-3 h-3 inline-block bg-orange-500 rounded-full mr-2"></span>
+                                <span className="w-3 h-3 inline-block bg-pink-500 rounded-full mr-2"></span>
                             </div>
                         </div>
                         <form action="" className="h-fit bg-white border border-slate-200 rounded-2xl lg:p-12 p-8 w-full max-w-lg md:max-w-3xl lg:max-w-full mx-auto">

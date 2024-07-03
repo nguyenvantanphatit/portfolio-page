@@ -3,8 +3,14 @@ export type Projects = {
     id: number;
     image: string;
     label: string;
+    time: string;
+    tech: string;
+    role: string;
+    live_demo: string;
+    desc: string;
+    sizeMember: number;
 };
-const projects = [
+const projects: Projects[] = [
     {
         id: 1,
         image: '/images/skill/nextjs.svg',
@@ -12,7 +18,34 @@ const projects = [
         time: "02/2024 - 2024",
         tech: "NextJs, NodeJs, Mysql, Tailwind CSS",
         role: "FE, BE",
+        live_demo: "https://echomedi.com",
+        desc: "",
         sizeMember: 3
+
+    },
+    {
+        id: 1,
+        image: '/images/skill/nextjs.svg',
+        label: "Echo Medi Blog",
+        time: "02/2024 - 2024",
+        tech: "NextJs, NodeJs, Mysql, Tailwind CSS",
+        role: "FE, BE",
+        live_demo: "https://suckhoe.echomedi.com",
+        desc: "",
+        sizeMember: 1
+
+    },
+    {
+        id: 1,
+        image: '/images/skill/nextjs.svg',
+        label: "Wheel Of Fortune",
+        time: "02/2024 - 2024",
+        tech: "NextJs, Tailwind CSS",
+        role: "FE, BE",
+        live_demo: "https://luckyechomedi.vercel.app",
+        desc: "",
+        sizeMember: 1
+
     },
     {
         id: 2,
@@ -21,6 +54,8 @@ const projects = [
         time: "11/2023 - 1/2024",
         tech: "ReactJs, NodeJs, Mysql, Antd",
         role: "FE, BE",
+        live_demo: "",
+        desc: "",
         sizeMember: 6
     },
     {
@@ -30,24 +65,31 @@ const projects = [
         time: "08/2023 - 10/2023",
         tech: "Angular, Antd",
         role: "FE",
+        live_demo: "",
+        desc: "",
         sizeMember: 6
     },
     {
         id: 4,
         image: '/images/skill/typescript.svg',
-        label: "Viet Japan Digital Connect Platform",
+        label: "VJP Connect Platform",
         time: "06/2023 - 07/2023",
         tech: "ReactJs, NodeJs, Mysql, Antd",
         role: "FE, BE",
+        live_demo: "https://www.vjp-connect.com",
+        desc: "",
         sizeMember: 4
 
     },
     {
         id: 5,
         image: '/images/skill/html.svg',
-        label: "Profile",
+        label: "Portfolio Page",
         time: "07/2024",
+        tech: "NextJs, Tailwind CSS",
         role: "FE",
+        live_demo: "https://tanphat-profile.netlify.app",
+        desc: "",
         sizeMember: 1
     },
 ]
@@ -59,16 +101,24 @@ export default function Projects() {
                     {projects.map((item) => (
                         <div
                             key={item.id}
-                            className="animate_top group relative rounded-lg border border-stroke bg-white p-8 shadow-solid-10 dark:border-strokedark dark:bg-blacksection dark:shadow-none"
+                            className="animate_top group relative rounded-lg border border-stroke bg-white shadow-solid-10 dark:border-strokedark dark:bg-blacksection dark:shadow-none"
                         >
-                            <div className="absolute -right-3.5 top-7.5 -rotate-90 rounded-bl-full rounded-tl-full bg-primary px-4.5 py-1.5 text-metatitle font-medium uppercase text-white">
-                                Phổ Biến
+                            <div className="block overflow-hidden">
+                                <img src="https://pagedone.io/asset/uploads/1695365240.png" alt="Card image" />
                             </div>
-                            <h3 className="mb-7.5 text-2xl font-bold text-black dark:text-white">
-                                {item.label}
-                            </h3>
-                            <div className="border-t border-stroke pb-12.5 pt-9 dark:border-strokedark">
-                                <img src={item.image} alt={`Brand ${item.id}`} />
+                            <div className="p-4">
+                                <h4 className="text-base font-semibold text-gray-900 mb-2 capitalize transition-all duration-500">{item.label}</h4>
+                                <p className="text-sm font-normal text-gray-500 transition-all duration-500 leading-5 mb-5">{item.tech}</p>
+                                <div className='space-x-4'>
+                                    {item.live_demo && (
+                                        <button className="bg-indigo-600 shadow-sm rounded-full py-2 px-5 text-xs text-white font-semibold">
+                                            <a href={item.live_demo}>
+                                                Live Demo
+                                            </a>
+                                        </button>
+                                    )}
+                                    <button className="bg-indigo-600 shadow-sm rounded-full py-2 px-5 text-xs text-white font-semibold">Read More</button>
+                                </div>
                             </div>
                         </div>
                     ))}
