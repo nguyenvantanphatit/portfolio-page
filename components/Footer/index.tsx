@@ -1,328 +1,43 @@
 "use client";
 import { motion } from "framer-motion";
-import Image from "next/image";
 const Footer = () => {
-  const locale = "vi" ? "vi" : "en";
   return (
     <>
-      <footer 
-        aria-label="Site Footer">
-        <div className="2xl:container 2xl:mx-auto lg:pb-16 md:py-8 pb-9 px-4 sm:px-12">
-            <div className="grid grid-cols-1 sm:gap-5 gap-y-10 lg:grid-cols-4">
-              <div>
-                <div className="flex justify-center text-black sm:justify-start max-sm:mt-5 mb-5 relative">
-                  <img alt="ECHO MEDI is a comprehensive healthcare provider to serve you and your family. We are at the forefront of the healthcare industry in Vietnam in enhancing the ‘family doctor’ concept found in advanced countries worldwide. ECHO MEDI là hệ thống y tế toàn diện cho bạn và gia đình. Chúng tôi tiên phong tại Việt Nam trong việc nâng cấp mô hình “Bác sĩ gia đình” của các nước tiên tiến trên thế giới." loading="lazy" src="https://i.imgur.com/qUMuiaf.png" className="max-h-16 m-auto" />
+      <footer className="w-full bg-slate-50 ">
+                <div className="w-full max-w-7xl px-5 lg:px-8 mx-auto">
+                    <div className="py-7 border-t ">
+                        <div className="flex items-center justify-center flex-col lg:space-y-0 space-y-8 lg:justify-between lg:flex-row">
+                            <div className="flex justify-center space-x-4 sm:justify-center sm:mt-0 ">
+                            <a href="javascript:;" className="w-9 h-9 rounded-full border border-gray-700 flex justify-center items-center hover:border-indigo-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <g id="Social Media">
+                                            <path id="Vector" d="M11.3214 8.93666L16.4919 3.05566H15.2667L10.7772 8.16205L7.1914 3.05566H3.05566L8.47803 10.7774L3.05566 16.9446H4.28097L9.022 11.552L12.8088 16.9446H16.9446L11.3211 8.93666H11.3214ZM9.64322 10.8455L9.09382 10.0765L4.72246 3.95821H6.60445L10.1322 8.8959L10.6816 9.66481L15.2672 16.083H13.3852L9.64322 10.8458V10.8455Z" fill="black"></path>
+                                        </g>
+                                    </svg>
+                                </a>
+                                <a href="javascript:;" className="w-9 h-9 rounded-full border border-gray-700 flex justify-center items-center hover:border-indigo-600">
+                                    <svg className="w-5 h-5 text-white" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.70975 7.93663C4.70975 6.65824 5.76102 5.62163 7.0582 5.62163C8.35537 5.62163 9.40721 6.65824 9.40721 7.93663C9.40721 9.21502 8.35537 10.2516 7.0582 10.2516C5.76102 10.2516 4.70975 9.21502 4.70975 7.93663ZM3.43991 7.93663C3.43991 9.90608 5.05982 11.5025 7.0582 11.5025C9.05658 11.5025 10.6765 9.90608 10.6765 7.93663C10.6765 5.96719 9.05658 4.37074 7.0582 4.37074C5.05982 4.37074 3.43991 5.96719 3.43991 7.93663ZM9.97414 4.22935C9.97408 4.39417 10.0236 4.55531 10.1165 4.69239C10.2093 4.82946 10.3413 4.93633 10.4958 4.99946C10.6503 5.06259 10.8203 5.07916 10.9844 5.04707C11.1484 5.01498 11.2991 4.93568 11.4174 4.81918C11.5357 4.70268 11.6163 4.55423 11.649 4.39259C11.6817 4.23095 11.665 4.06339 11.6011 3.91109C11.5371 3.7588 11.4288 3.6286 11.2898 3.53698C11.1508 3.44536 10.9873 3.39642 10.8201 3.39635H10.8197C10.5955 3.39646 10.3806 3.48424 10.222 3.64043C10.0635 3.79661 9.97434 4.00843 9.97414 4.22935ZM4.21142 13.5892C3.52442 13.5584 3.15101 13.4456 2.90286 13.3504C2.57387 13.2241 2.33914 13.0738 2.09235 12.8309C1.84555 12.588 1.69278 12.3569 1.56527 12.0327C1.46854 11.7882 1.3541 11.4201 1.32287 10.7431C1.28871 10.0111 1.28189 9.79119 1.28189 7.93669C1.28189 6.08219 1.28927 5.86291 1.32287 5.1303C1.35416 4.45324 1.46944 4.08585 1.56527 3.84069C1.69335 3.51647 1.84589 3.28513 2.09235 3.04191C2.3388 2.79869 2.57331 2.64813 2.90286 2.52247C3.1509 2.42713 3.52442 2.31435 4.21142 2.28358C4.95417 2.24991 5.17729 2.24319 7.0582 2.24319C8.9391 2.24319 9.16244 2.25047 9.90582 2.28358C10.5928 2.31441 10.9656 2.42802 11.2144 2.52247C11.5434 2.64813 11.7781 2.79902 12.0249 3.04191C12.2717 3.2848 12.4239 3.51647 12.552 3.84069C12.6487 4.08513 12.7631 4.45324 12.7944 5.1303C12.8285 5.86291 12.8354 6.08219 12.8354 7.93669C12.8354 9.79119 12.8285 10.0105 12.7944 10.7431C12.7631 11.4201 12.6481 11.7881 12.552 12.0327C12.4239 12.3569 12.2714 12.5882 12.0249 12.8309C11.7784 13.0736 11.5434 13.2241 11.2144 13.3504C10.9663 13.4457 10.5928 13.5585 9.90582 13.5892C9.16306 13.6229 8.93994 13.6296 7.0582 13.6296C5.17645 13.6296 4.95395 13.6229 4.21142 13.5892ZM4.15307 1.03424C3.40294 1.06791 2.89035 1.18513 2.4427 1.3568C1.9791 1.53408 1.58663 1.77191 1.19446 2.1578C0.802277 2.54369 0.56157 2.93108 0.381687 3.38797C0.207498 3.82941 0.0885535 4.3343 0.0543922 5.07358C0.0196672 5.81402 0.0117188 6.05074 0.0117188 7.93663C0.0117188 9.82252 0.0196672 10.0592 0.0543922 10.7997C0.0885535 11.539 0.207498 12.0439 0.381687 12.4853C0.56157 12.9419 0.802334 13.3297 1.19446 13.7155C1.58658 14.1012 1.9791 14.3387 2.4427 14.5165C2.89119 14.6881 3.40294 14.8054 4.15307 14.839C4.90479 14.8727 5.1446 14.8811 7.0582 14.8811C8.9718 14.8811 9.212 14.8732 9.96332 14.839C10.7135 14.8054 11.2258 14.6881 11.6737 14.5165C12.137 14.3387 12.5298 14.1014 12.9219 13.7155C13.3141 13.3296 13.5543 12.9419 13.7347 12.4853C13.9089 12.0439 14.0284 11.539 14.062 10.7997C14.0962 10.0587 14.1041 9.82252 14.1041 7.93663C14.1041 6.05074 14.0962 5.81402 14.062 5.07358C14.0278 4.33424 13.9089 3.82913 13.7347 3.38797C13.5543 2.93135 13.3135 2.5443 12.9219 2.1578C12.5304 1.7713 12.137 1.53408 11.6743 1.3568C11.2258 1.18513 10.7135 1.06735 9.96388 1.03424C9.21256 1.00058 8.97236 0.992188 7.05876 0.992188C5.14516 0.992188 4.90479 1.00002 4.15307 1.03424Z" fill="black" />
+                                    </svg>
+                                </a>
+                                <a href="javascript:;" className="w-9 h-9 rounded-full border border-gray-700 flex justify-center items-center hover:border-indigo-600">
+                                    <svg className="w-4 h-4 text-white" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.8794 11.5527V3.86835H0.318893V11.5527H2.87967H2.8794ZM1.59968 2.81936C2.4924 2.81936 3.04817 2.2293 3.04817 1.49188C3.03146 0.737661 2.4924 0.164062 1.61666 0.164062C0.74032 0.164062 0.167969 0.737661 0.167969 1.49181C0.167969 2.22923 0.723543 2.8193 1.5829 2.8193H1.59948L1.59968 2.81936ZM4.29668 11.5527H6.85698V7.26187C6.85698 7.03251 6.87369 6.80255 6.94134 6.63873C7.12635 6.17968 7.54764 5.70449 8.25514 5.70449C9.18141 5.70449 9.55217 6.4091 9.55217 7.44222V11.5527H12.1124V7.14672C12.1124 4.78652 10.8494 3.68819 9.16483 3.68819C7.78372 3.68819 7.17715 4.45822 6.84014 4.98267H6.85718V3.86862H4.29681C4.33023 4.5895 4.29661 11.553 4.29661 11.553L4.29668 11.5527Z" fill="black" />
+                                    </svg>
+                                </a>
+                                <a href="javascript:;" className="w-9 h-9 rounded-full border border-gray-700 flex justify-center items-center hover:border-indigo-600">
+                                    <svg className="w-5 h-3.5 text-white" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9346 1.13529C14.5684 1.30645 15.0665 1.80588 15.2349 2.43896C15.5413 3.58788 15.5413 5.98654 15.5413 5.98654C15.5413 5.98654 15.5413 8.3852 15.2349 9.53412C15.0642 10.1695 14.5661 10.669 13.9346 10.8378C12.7886 11.1449 8.19058 11.1449 8.19058 11.1449C8.19058 11.1449 3.59491 11.1449 2.44657 10.8378C1.81277 10.6666 1.31461 10.1672 1.14622 9.53412C0.839844 8.3852 0.839844 5.98654 0.839844 5.98654C0.839844 5.98654 0.839844 3.58788 1.14622 2.43896C1.31695 1.80353 1.81511 1.30411 2.44657 1.13529C3.59491 0.828125 8.19058 0.828125 8.19058 0.828125C8.19058 0.828125 12.7886 0.828125 13.9346 1.13529ZM10.541 5.98654L6.72178 8.19762V3.77545L10.541 5.98654Z" fill="black" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <span className="text-gray-400  block">Copyright ©2023 Tan Phat. All rights reserved.</span>
+                            <div className="flex mt-4 space-x-4 sm:justify-center sm:mt-0 ">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <p className="text-sm mt-4 text-center leading-relaxed text-black sm:text-left m-auto sm:m-0 !leading-6"
-                >
-                  {locale === "en" ? "ECHO MEDI is a comprehensive healthcare provider to serve you and your family. We are at the forefront of the healthcare industry in Vietnam in enhancing the ‘family doctor’ concept found in advanced countries worldwide." : "ECHO MEDI là hệ thống y tế toàn diện cho bạn và gia đình. Chúng tôi tiên phong tại Việt Nam trong việc nâng cấp mô hình “Bác sĩ gia đình” của các nước tiên tiến trên thế giới."}
-                </p>
-
-                <ul className="mt-6 flex justify-center items-center gap-6 sm:justify-start md:gap-8">
-                  <li>
-                    <a
-                      href="https://www.facebook.com/ECHO-MEDI-104159875780641?gidzl=VhMH36yZUJrohfK8RJvuENoibGDxQYauCFp53YbcVMXXeP0FV6SkRM6bobTyD25jO_N5MZ4fezq3PY9vE0"
-                      rel="noreferrer"
-                      target="_blank"
-                      className="text-black"
-                    >
-                      <span className="sr-only">Facebook</span>
-                      <svg
-                        className="h-9 w-9"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      href="https://www.youtube.com/channel/UCJ7phE7dq0lbhdOzu5R0_nw/featured"
-                      rel="noreferrer"
-                      target="_blank"
-                      className="text-black"
-                    >
-                      <span className="sr-only">Youtube</span>
-                      <svg
-                        className="h-19 w-9"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div
-                className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4 lg:col-span-3 mt-0"
-              >
-                <div className="text-center sm:text-left">
-                  <h3 className="font-bold text-black">{locale === "en" ? " ADDRESS" : "ĐỊA CHỈ"}</h3>
-
-                  <ul className="mt-6 space-y-4 text-sm">
-                    <li
-                      className="flex flex-col items-start justify-center gap-1.5  sm:items-start items-center"
-                    >
-                      <p className="-mt-0.5 not-italic text-black">
-                        {locale === "en" ? "1026 Nguyen Van Linh, Tan Phong Ward, District 7, HCMC" : "1026 Nguyễn Văn Linh, P. Tân Phong, Quận 7, TP.HCM"}
-                        &ensp;
-                      </p>
-                      <a style={{
-                        color: "#406D48"
-                      }}
-                        target="_blank"
-                        href="https://www.google.com/maps/place/ECHO+MEDI+-+Healthcare+Evolved/@10.7292756,106.7035192,17z/data=!3m1!4b1!4m6!3m5!1s0x31752f1a90aeb161:0x6723f8e04c8e3433!8m2!3d10.7292756!4d106.7057079!16s%2Fg%2F11sb5r_5yt?hl=vi-VN"
-                        className="text-xs font-bold hover:underline">{locale === "en" ? "View Maps" : "Xem bản đồ"}</a>
-                    </li>
-                    <li
-                      className="flex flex-col  items-start justify-center gap-1.5 sm:items-start items-center"
-                    >
-                      <address className="-mt-0.5 not-italic text-black">
-                        {locale === "en" ? "46 Nguyen Thi Dinh, An Phu Ward, Thu Duc City, HCMC" : "46 Nguyễn Thị Định, P.An Phú, TP.Thủ Đức, TP.HCM"}
-                        &ensp;
-                      </address>
-                      <a style={{
-                        color: "#406D48"
-                      }}
-                        target="_blank"
-                        href="https://www.google.com/maps/place/ECHO+MEDI/@10.7916213,106.7512846,17z/data=!3m1!4b1!4m6!3m5!1s0x31752764abde92c7:0x5e0ef8d1067c35f!8m2!3d10.7916213!4d106.7534733!16s%2Fg%2F11sk4sppjf?hl=vi-VN"
-                        className="text-xs font-bold hover:underline">{locale === "en" ? "View Maps" : "Xem bản đồ"}</a>
-                    </li>
-                    <li
-                      className="flex flex-col  items-start justify-center gap-1.5 sm:justify-start sm:items-start items-center"
-                    >
-                      <address className="-mt-0.5 not-italic text-black">
-                        {locale === "en" ? "Canary Plaza, #0102, 5 Binh Duong Highway, Binh Hoa Ward, Thuan An City" : "Canary Plaza, Căn 0102, Số 5, Đại lộ Bình Dương, P. Bình Hoà, TP. Thuận An"}
-                        &ensp;
-                      </address>
-                      <a style={{
-                        color: "#406D48"
-                      }}
-                        href="https://www.google.com/maps/place/ECHO+MEDI+-+Healthcare+Evolved/@10.9286844,106.7094019,17z/data=!3m1!4b1!4m6!3m5!1s0x3174d729ae7d0e51:0xe53ac856559d1703!8m2!3d10.9286844!4d106.7119768!16s%2Fg%2F11stjtr2hy"
-                        target="_blank"
-                        className="text-xs font-bold hover:underline">{locale === "en" ? "View Maps" : "Xem bản đồ"}</a>
-                    </li>
-
-                    <h3 className="font-bold text-black mt-22">{locale === "en" ? "CLINIC HOURS" : "LỊCH LÀM VIỆC "}</h3>
-
-                    <nav aria-label="Footer Services Nav" className="mt-6">
-                      <ul className="space-y-2 text-sm">
-                        <li>
-
-                          {locale === "en" ? "Monday - Saturday:" : "Thứ hai - Thứ bảy:"} 7:00 - 21:00
-                        </li>
-
-                        <li>
-
-                          {locale === "en" ? "Sunday:" : "Chủ nhật:"} 7:00 - 15:00
-
-                        </li>
-                      </ul>
-                    </nav>
-                  </ul>
-                </div>
-
-                <div className="text-center sm:text-left">
-                  <h3 className=" font-bold text-black">{locale === "en" ? "POLICY" : "CHÍNH SÁCH"}</h3>
-                  <nav aria-label="Footer Services Nav" className="mt-6">
-                    <ul className="space-y-4 text-sm">
-                      <li className="hover:underline flex sm:justify-start justify-center">
-                        <a href="/policy/chinh-sach-bao-mat"><p className="sm:m-0 m-auto">{locale === "en" ? "Privacy Policy" : "Chính sách bảo mật"}</p></a>
-                      </li>
-                      <li className="hover:underline flex sm:justify-start justify-center">
-                        <a href="/policy/chinh-sach-thanh-toan"><p className="sm:m-0 m-auto">{locale === "en" ? "Payment Policy" : "Chính sách thanh toán"}</p></a>
-                      </li>
-                      <li className="hover:underline flex sm:justify-start justify-center">
-                        <a href="/policy/chinh-sach-van-chuyen"><p className="sm:m-0 m-auto">{locale === "en" ? "Shipping Policy" : "Chính sách vận chuyển"}</p></a>
-                      </li>
-                      <li className="hover:underline flex sm:justify-start justify-center">
-                        <a href="/policy/chinh-sach-doi-tra"><p className="sm:m-0 m-auto">{locale === "en" ? "Return Policy" : "Chính sách đổi trả"}</p></a>
-                      </li>
-                      <li className="hover:underline flex sm:justify-start justify-center">
-                        <a href="/policy/dieu-khoan-va-chinh-sach-hoat-dong"><p className="sm:m-0 m-auto">{locale === "en" ? "Operating Policies" : "Điều khoản và chính sách hoạt động"}</p></a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-                <div className="text-center sm:text-left">
-                  <h3 className="font-bold text-black">{locale === "en" ? " CONTACT" : "LIÊN HỆ"}</h3>
-
-                  <ul className="mt-6 space-y-4 text-sm">
-                    <li>
-
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5 shrink-0 text-black inline mr-2"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                        />
-                      </svg>
-
-                      <span className="text-black">contact@echomedi.com</span>
-                    </li>
-                    <li>
-
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5 shrink-0 text-black inline mr-2"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                        />
-                      </svg>
-
-                      <a href="tel:1900638408" className="text-black">1900 638 408</a>
-                    </li>
-                    <li>
-
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5 shrink-0 text-black inline mr-2"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                        />
-                      </svg>
-
-                      <span className="text-black">{locale === "en" ? "(84) 76 8638 408" : "0768 638 408"}
-                      </span>
-                    </li>
-                    <li>
-                      <span className="text-black block mb-2">{locale === "en" ? "Customer service district 7: " : "Chăm sóc khách hàng quận 7"}
-                      </span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5 shrink-0 text-black inline mr-2"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                        />
-                      </svg>
-                      <span className="text-black">
-                        {locale === "en" ? "(84) 28 7300 9801" : "028 7300 9801"}
-                      </span>
-
-                    </li>
-                    <li>
-                      <span className="text-black block mb-2">{locale === "en" ? "Customer service district 2: " : "Chăm sóc khách hàng quận 2"}
-                      </span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5 shrink-0 text-black inline mr-2"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                        />
-                      </svg>
-                      <span className="text-black">{locale === "en" ? "(84) 28 7300 9802" : "028 7300 9802"}
-                      </span>
-                    </li>
-                    <li>
-                      <span className="text-black block mb-2">{locale === "en" ? "Customer service Binh Duong city: " : "Chăm sóc khách hàng Bình Dương"}
-                      </span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5 shrink-0 text-black inline mr-2"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                        />
-                      </svg>
-                      <span className="text-black">{locale === "en" ? "(84) 28 7300 9803" : "028 7300 9803"}
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="text-center sm:text-left flex flex-col items-center">
-                  <h3 className="font-bold text-black mb-6 ">{locale === "en" ? "DOWNLOAD APP" : "TẢI ỨNG DỤNG"}</h3>
-                  <Image alt="ECHO MEDI" width={150} height={150} loading="lazy" src="data:image/gif;base64,R0lGODdhfQB9AIAAAAAAAP///ywAAAAAfQB9AAAC/4SPqbvhDxOcgdlD4928e5s9Ulh9CFma6qqiY8gCbkzXyoyRMW73u34Crni+DeqoyYmCsKLS8UISo9LmM2WY9ibUKuXiJXKZGee1G14y0tZs0t0ujq9sKKg+h9vpb3kfn3fTB/Y3yBLoRfURqOiBaDhUKNXYwUiGZSS5V/M4ebkIqYdJqCbq04lEyWF55qg5evgqFipYWruZaau1VkWKy9pAC3yLuRvsyatLq0oMqhznexTNPH1nW813bZ26Xbz82e38K7TaGw5eKfzdyi6KJ+6tnYxLfd4uAyh/PK7fbF/+jF8+ePXmwbqHzdSld64CHtz3EF8/ZqgAEUQHkN7COv8FFWYrs9EhQ4MjPUJEE2dWvogrBbKURU4iyI9hopWU+VJkTJUDu90cVpHnl5BpzGSM55LiK6NMcyXFiFPpxKZmKkp9ipAqVatQuWbVytSryahd13FqmcjnUqJo27rtJxTl27loba6lSTcvR7UO5er9W5MvVneAjZGlaVfnVIMXGf/DCXRnzMZHE/pDLBjp0EiLx3Y8TBiuZGgNNTo+fZJtYpfDLLtWvQWm6NkzIf4061RzZNqbbe/92kK2ac+wSf4mzpm1Ot67ewI3EXT5cMjSLT4WS5356Ol1S2u+2ptY3Mxp0/UtSxrvXd9sKIN+b7g88tBFvYP3uzp8c+vma8P/Fx6YcSnNhR96yrVHHoC3DXieesiw5x9dBd4THYICRkhgcWNVWN+F+hXWEniGnbJdTm6JOJlR43m44IH+hVVifi3qlmJVMSZo4YbmaLVias/JRwOHEX2G3X4j2qdhbpZh51drSGLWn4nfQdUkbkvW6GOW/2mXXnCKTUdkdUDeZ+CUz5HJIpZbDrammZVRyVZ867WJ5ps/HneZjg3qCWaZMqpZ5JxMXidooQ9m1yeFO9JH455tCuWkoodCaqiLH3aZJ6KXYsggm0AeKSk3UDJap6ZCuvfpjahlWuqEYI3KKpyhShmpE3LydiWXidoKaHW5cqcmjJju9yutVsYGoqh8/25q7LAlFoaio1Xq2qhe0bI5LbCdgnitm+L1ui20ZQ7qoLYvghVoZ0rKOt+rdLIL3ZyfvZruruveqa6wnh67KrHu9itvLNLCm600SRbcba2aFkwptfUaHKWQqTo7qYK4NdwhqTjue2h+DD8rpqqMKtzjvSMHvCqJjpJs8cApI8uxvRKjrKXKMQ85rsgm+7HyxS1j+5jN3rLcc8cbhwcPuVrOrO5NSdOcKdMy4/m0y0v/jHO5SHundNRYV61svNuiCnLTABb7GsDh+vyllGGa3barO98K9Jk5x/2kxmqbm/Wyp+a9MKEOL/revxF/HSfhChuu98ltT2wv44Fr/fHYki5zjbjWJV+eGcLoVsps2o5HriLoXRsZ7OdFc8r3n/mWvnroQSf+uo2xnx4ypgUAADs=" className="" />
-                  <a href="https://apps.apple.com/vn/app/echo-medi/id6448538294" target="blank" className="cursor-pointer mt-2"><Image alt="ECHO MEDI" width={150} height={50} loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Download_on_the_App_Store_RGB_blk.svg/1920px-Download_on_the_App_Store_RGB_blk.svg.png" className="mt-4" /></a>
-                  <a href="https://play.google.com/store/apps/details?id=com.echomedi.echomedi&hl=vi" target="blank" className="cursor-pointer"><Image alt="ECHO MEDI" width={150} height={50} loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" className="mt-2" /></a>
-                  <a href="https://appgallery.huawei.com/app/C109669075" target="blank" className="cursor-pointer"><Image alt="ECHO MEDI" width={150} height={50} loading="lazy" src="https://d3e4m6b6rxmux9.cloudfront.net/dc89f3f0f72d0a31db408a245d65_a12841c7a5.svg?updated_at=2023-12-16T08:02:22.421Z" className="mt-2" /></a>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-12 mb-12 border-t border-black-100 pt-6">
-              <div className="sm:flex sm:justify-between sm:text-left">
-                <p className="text-center mt-4 font-bold text-sm text-black sm:order-first sm:mt-0">
-                  {locale === "en" ? "ECHO MEDI LIMITED LIABILITY COMPANY" : "CÔNG TY TNHH ECHO MEDI"}
-                </p>
-              </div>
-              <div
-                className="sm:flex sm:justify-between sm:text-left">
-                <p className="mt-4 text-xs text-black sm:order-first sm:mt-0">
-                  {locale === "en" ? "Business registration number: 0317439798, first registered on August 19th, 2022, and the first amendment was registered on October 31st, 2022, issued by the HCMC D.P.I" : "Mã số ĐKKD: 0317439798 đăng ký lần đầu ngày 19/08/2022, đăng ký thay đổi lần thứ 1 ngày 31/10/2022, được cấp bởi Sở KHĐT TP.HCM"}
-                </p>
-              </div>
-              <div
-                className="sm:flex sm:justify-between sm:text-left">
-                <p className="mt-4 text-xs text-black sm:order-first sm:mt-0">
-                  {locale === "en" ? "" : "Mã số CNĐĐKKD: 12175/DKKDD-HCM được cấp bởi Sở Y tế TP.HCM"}
-                </p>
-              </div>
-              <div
-                className="sm:flex sm:justify-between sm:text-left">
-                <p className="mt-4 text-xs text-black sm:order-first sm:mt-0">
-                  {locale === "en" ? "" : "Mã số ĐKHĐ: 09269/HCM-GPHĐ được cấp bởi Sở Y tế TP.HCM"}
-                </p>
-              </div>
-            </div>
-         
-        </div>
-      </footer>
+            </footer>
     </>
   );
 };

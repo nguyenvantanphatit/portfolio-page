@@ -4,37 +4,57 @@ export type Projects = {
     image: string;
     label: string;
 };
-const projects: Projects[] = [
+const projects = [
     {
         id: 1,
         image: '/images/skill/nextjs.svg',
-        label: "NextJs"
+        label: "Echo Medi Website",
+        time: "02/2024 - 2024",
+        tech: "NextJs, NodeJs, Mysql, Tailwind CSS",
+        role: "FE, BE",
+        sizeMember: 3
     },
     {
         id: 2,
         image: '/images/skill/react.svg',
-        label: "ReactJs"
+        label: "Luna Project",
+        time: "11/2023 - 1/2024",
+        tech: "ReactJs, NodeJs, Mysql, Antd",
+        role: "FE, BE",
+        sizeMember: 6
     },
     {
         id: 3,
         image: '/images/skill/javascript.svg',
-        label: "Javascript"
+        label: "Dohbo Janpan",
+        time: "08/2023 - 10/2023",
+        tech: "Angular, Antd",
+        role: "FE",
+        sizeMember: 6
     },
     {
         id: 4,
         image: '/images/skill/typescript.svg',
-        label: "Typecript"
+        label: "Viet Japan Digital Connect Platform",
+        time: "06/2023 - 07/2023",
+        tech: "ReactJs, NodeJs, Mysql, Antd",
+        role: "FE, BE",
+        sizeMember: 4
+
     },
     {
         id: 5,
         image: '/images/skill/html.svg',
-        label: "Html"
+        label: "Profile",
+        time: "07/2024",
+        role: "FE",
+        sizeMember: 1
     },
 ]
 export default function Projects() {
     return (
         <>
-            <div className=' mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+            <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
                 <div className="grid grid-cols-1 gap-4 xl:grid-cols-4">
                     {projects.map((item) => (
                         <div
