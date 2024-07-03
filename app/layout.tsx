@@ -12,7 +12,7 @@ export default function RootLayout({
   return (
     <html lang="vi" suppressHydrationWarning>
       <Head>
-        <link rel="icon" href="/profile.png" />
+        <link rel="icon" href="/favicon1.png" />
       </Head>
       <body>
         <Header />
