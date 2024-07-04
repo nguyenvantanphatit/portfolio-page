@@ -593,8 +593,8 @@ pre {
 }
 
 .ring1 {
-  height: 28rem;
-  width: 28rem;
+  height: 20rem;
+  width: 20rem;
   animation: glow1 2.5s infinite;
 }
 
@@ -611,8 +611,8 @@ pre {
 }
 
 .ring2 {
-  height: 20rem;
-  width: 20rem;
+  height: 16rem;
+  width: 16rem;
   animation: glow2 2.5s infinite;
 }
 

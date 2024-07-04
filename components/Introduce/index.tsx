@@ -26,7 +26,7 @@ export default function Introduce() {
     return (
         <>
             <div className='bg-slate-50'>
-                <div className='w-full max-w-7xl px-5 lg:px-8 mx-auto flex items-center justify-between'>
+                <div className='w-full max-w-7xl px-5 lg:px-8 mx-auto flex flex-col md:flex-row items-center justify-between gap-8'>
                     <div className="wrapper">
                         <div className="rings">
                             <div className="ring ring1">
