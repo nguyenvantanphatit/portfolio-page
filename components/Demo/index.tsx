@@ -74,7 +74,7 @@ const dataBrand: DataBrand[] = [
 export default function Demo() {
     return (
         <>
-            <div className='flex justify-between flex-col md:flex-row items-center bg-slate-50'>
+            <div className='flex justify-between flex-col md:flex-row items-center bg-slate-50 py-10'>
                 <div className="system w-full md:w-1/2">
                     <div className="system__orbit system__orbit--sun">
                         <img src="/images/skill/nextjs.svg" alt="Sun" className="system__icon system__icon--sun" />

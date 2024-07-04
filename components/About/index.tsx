@@ -3,8 +3,7 @@ import React from 'react'
 export default function About() {
     return (
         <>
-            <div className='bg-slate-50'>
-            <div className="header">
+            <div className="header h-50 md:h-[500px]">
                 <svg className="header__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1337.97 684.43">
                     <path className="header__shape bigSquare" fill="#16d5d1" d="M546.519 349.271l86.383-56.098 56.097 86.383-86.383 56.098z" />
                     <path className="header__shape triangle" fill="none" stroke="#ff4676" stroke-width="8" d="M372.15 462.17L321 434.58l-4.88 56.16z" />
@@ -14,7 +13,6 @@ export default function About() {
                     <circle className="header__shape littleCircle" fill="#0f1c70" cx="1036.52" cy="203.17" r="27" />
                 </svg>
                 <h3 className="header__title">Projects</h3>
-            </div>
             </div>
         </>
     )

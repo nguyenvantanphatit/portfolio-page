@@ -393,14 +393,13 @@ pre {
 
 .header {
   position: relative;
-  min-height: 50vh;
+  /* min-height: 50vh; */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .header__svg {
-  background: #f8fafc;
   position: absolute;
   width: 100%;
   top: 50%;
