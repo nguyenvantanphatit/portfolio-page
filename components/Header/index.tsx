@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Header = () => {
     return (
-        <section className="relative md:pt-40 pt-28 pb-10 bg-slate-50 ">
+        <section className="relative md:pt-40 pt-28 pb-10 bg-slate-50">
             <img src="/images/banner/banner.jpg" alt="cover-image" className="w-full absolute top-0 left-0 z-0 md:h-1/2 h-50" />
             <div className="w-full max-w-7xl mx-auto px-6 md:px-8">
                 <div className="flex items-center justify-center sm:justify-start relative z-10 mb-5">
