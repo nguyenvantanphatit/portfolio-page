@@ -1,8 +1,9 @@
+import dynamic from 'next/dynamic';
 import { Metadata } from "next";
 import Contact from "@/components/Contact";
 import About from "@/components/About";
 import Skill from "@/components/Skill";
-import Projects from "@/components/Projects";
+const Projects = dynamic(() => import('@/components/Projects'), { ssr: false });
 export const metadata: Metadata = {
   title: "Tấn Phát",
   description: "Tấn Phát Software Engineer",
