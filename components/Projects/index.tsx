@@ -180,7 +180,7 @@ export default function Projects() {
                                     onClick={handleLoadAll}
                                     className="rounded-2xl mt-2 border border-gray-200 bg-white px-4 py-2 group transition-all duration-500 transform hover:scale-105"
                                 >
-                                    Load all
+                                    Load All
                                 </button>
                             </div>
                         }

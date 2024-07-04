@@ -71,7 +71,7 @@ const dataBrand: DataBrand[] = [
 
 
 ]
-export default function Demo() {
+export default function Skill() {
     return (
         <>
             <div className='flex justify-between flex-col md:flex-row items-center bg-slate-50 py-10'>
