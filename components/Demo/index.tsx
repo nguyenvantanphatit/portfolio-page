@@ -124,7 +124,7 @@ export default function Demo() {
                     viewport={{ once: true }}
                     className="animate_left w-full"
                 >
-                    <div className="mb-20 text-center">
+                    <div className="my-10 text-center">
                         <h1 className="text-4xl text-gray-900 text-center font-bold">Your Skills</h1>
                     </div>
                 </motion.div>
