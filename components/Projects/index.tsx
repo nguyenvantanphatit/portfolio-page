@@ -104,28 +104,6 @@ export default function Projects() {
                         variants={{
                             hidden: {
                                 opacity: 0,
-                                x: -20,
-                            },
-
-                            visible: {
-                                opacity: 1,
-                                x: 0,
-                            },
-                        }}
-                        initial="hidden"
-                        whileInView="visible"
-                        transition={{ duration: 1, delay: 0.1 }}
-                        viewport={{ once: true }}
-                        className="animate_left w-full"
-                    >
-                        <div className="text-center py-8">
-                            <h1 className="text-4xl text-gray-900 text-center font-bold">We work with the best partners</h1>
-                        </div>
-                    </motion.div>
-                    <motion.div
-                        variants={{
-                            hidden: {
-                                opacity: 0,
                                 x: 20,
                             },
 

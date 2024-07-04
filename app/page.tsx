@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Skill from "@/components/Skill";
 import Projects from "@/components/Projects"
 import Contact from "@/components/Contact";
 import About from "@/components/About";
@@ -30,8 +29,7 @@ export default function Home() {
   return (
     <main>
       <Demo />
-      {/* <About /> */}
-      <Skill />
+      <About />
       <Projects /> 
       <Contact />
     </main>
