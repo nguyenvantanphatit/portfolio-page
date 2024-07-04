@@ -1,6 +1,7 @@
 "use client";
 import React from 'react'
 import { motion } from "framer-motion";
+import GitHubCalendar from "react-github-calendar";
 export type DataBrand = {
     id: number;
     image: string;
@@ -72,40 +73,19 @@ const dataBrand: DataBrand[] = [
 
 ]
 export default function Skill() {
+    const transformData = (contributions) => {
+        const today = new Date();
+        const threeMonthsAgo = new Date(today.setMonth(today.getMonth() - 8));
+    
+        return contributions.filter(day => {
+            const date = new Date(day.date);
+            return date >= threeMonthsAgo;
+        });
+    };
     return (
         <>
             <div className='flex justify-between flex-col md:flex-row items-center bg-slate-50 py-10'>
-                <div className="system w-full md:w-1/2">
-                    <div className="system__orbit system__orbit--sun">
-                        <img src="/images/skill/nextjs.svg" alt="Sun" className="system__icon system__icon--sun" />
-                    </div>
-                    <div className="system__orbit system__orbit--mercury">
-                        <div className="system__planet system__planet--mercury">
-                            <img src="/images/skill/react.svg" alt="Mercury" />
-                        </div>
-                    </div>
-                    <div className="system__orbit system__orbit--venus">
-                        <div className="system__planet system__planet--venus">
-                            <img src="/images/skill/angular.svg" alt="Venus" />
-                        </div>
-                    </div>
-                    <div className="system__orbit system__orbit--earth">
-                        <div className="system__planet system__planet--earth">
-                            <img src="/images/skill/nodejs.svg" alt="Earth" />
-                        </div>
-                    </div>
-                    <div className="system__orbit system__orbit--mars">
-                        <div className="system__planet system__planet--mars">
-                            <img src="/images/skill/typescript.svg" alt="Mars" />
-                        </div>
-                    </div>
-                    <div className="system__orbit system__orbit--jupiter">
-                        <div className="system__planet system__planet--jupiter">
-                            <img src="/images/skill/javascript.svg" alt="Jupiter" />
-                        </div>
-                    </div>
-                </div>
-                <div>
+            <div>
                 <motion.div
                     variants={{
                         hidden: {
@@ -158,7 +138,49 @@ export default function Skill() {
                     </div>
                 </motion.div>
                 </div>
+                <div className="system w-full md:w-1/2">
+                    <div className="system__orbit system__orbit--sun">
+                        <img src="/images/skill/nextjs.svg" alt="Sun" className="system__icon system__icon--sun" />
+                    </div>
+                    <div className="system__orbit system__orbit--mercury">
+                        <div className="system__planet system__planet--mercury">
+                            <img src="/images/skill/react.svg" alt="Mercury" />
+                        </div>
+                    </div>
+                    <div className="system__orbit system__orbit--venus">
+                        <div className="system__planet system__planet--venus">
+                            <img src="/images/skill/angular.svg" alt="Venus" />
+                        </div>
+                    </div>
+                    <div className="system__orbit system__orbit--earth">
+                        <div className="system__planet system__planet--earth">
+                            <img src="/images/skill/nodejs.svg" alt="Earth" />
+                        </div>
+                    </div>
+                    <div className="system__orbit system__orbit--mars">
+                        <div className="system__planet system__planet--mars">
+                            <img src="/images/skill/typescript.svg" alt="Mars" />
+                        </div>
+                    </div>
+                    <div className="system__orbit system__orbit--jupiter">
+                        <div className="system__planet system__planet--jupiter">
+                            <img src="/images/skill/javascript.svg" alt="Jupiter" />
+                        </div>
+                    </div>
+                </div>
+                
             </div>
+            <section className="w-full xl:py-24 lg:py-20 py-12 bg-slate-50 border-b border-gray-300" id="contact">
+                <div className="w-full max-w-7xl px-6 lg:px-8 mx-auto">
+                    <GitHubCalendar
+                        username="nguyenvantanphatit"
+                        blockSize={25}
+                        blockMargin={10}
+                        fontSize={16}
+                        transformData={transformData}
+                    />
+                </div>
+            </section>
         </>
     )
 }

@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import Contact from "@/components/Contact";
 import About from "@/components/About";
 import Skill from "@/components/Skill";
+import Introduce from '@/components/Introduce';
 const Projects = dynamic(() => import('@/components/Projects'), { ssr: false });
 export const metadata: Metadata = {
   title: "Tấn Phát",
@@ -29,6 +30,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main>
+      <Introduce />
       <Skill />
       <About />
       <Projects /> 
