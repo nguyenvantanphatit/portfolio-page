@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import React from 'react'
+import React, { useState } from 'react'
 export type Projects = {
     id: number;
     image: string;
@@ -95,7 +95,36 @@ const projects: Projects[] = [
         sizeMember: 1
     },
 ]
+const detectMob = () => {
+    const toMatch = [
+        /Android/i,
+        /webOS/i,
+        /iPhone/i,
+        /iPad/i,
+        /iPod/i,
+        /BlackBerry/i,
+        /Windows Phone/i
+    ];
+
+    return toMatch.some((toMatchItem) => {
+        return navigator.userAgent.match(toMatchItem);
+    });
+}
 export default function Projects() {
+    const [showLoadAllButton, setShowLoadAllButton] = useState(true);
+    const [showHideButton, setShowHideButton] = useState(false);
+    const [cnt, setCnt] = useState(detectMob() ? 2 : 4);
+    const handleLoadAll = () => {
+        setCnt(-1);
+        setShowLoadAllButton(false);
+        setShowHideButton(true);
+    };
+
+    const handleHide = () => {
+        setCnt(detectMob() ? 2 : 8);
+        setShowLoadAllButton(true);
+        setShowHideButton(false);
+    };
     return (
         <>
             <div className='bg-slate-50 pt-10' id="projects">
@@ -144,6 +173,28 @@ export default function Projects() {
                                 </div>
                             ))}
                         </div>
+                        {showLoadAllButton && cnt !== projects.length && cnt !== -1 &&
+                            <div className="flex justify-center items-center mt-4 ">
+                                <button
+                                    type="button"
+                                    onClick={handleLoadAll}
+                                    className="rounded-2xl mt-2 border border-gray-200 bg-white px-4 py-2 group transition-all duration-500 transform hover:scale-105"
+                                >
+                                    Load all
+                                </button>
+                            </div>
+                        }
+                        {showHideButton &&
+                            <div className="flex justify-center mt-4">
+                                <button
+                                    type="button"
+                                    onClick={handleHide}
+                                    className="rounded-2xl mt-2 border border-gray-200 bg-white px-4 py-2 group transition-all duration-500 transform hover:scale-105"
+                                >
+                                    Hide
+                                </button>
+                            </div>
+                        }
                     </motion.div>
                 </div>
             </div>
