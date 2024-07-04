@@ -148,7 +148,7 @@ export default function Projects() {
                         className="animate_right w-full"
                     >
                         <div className="grid grid-cols-1 gap-6 xl:grid-cols-4">
-                            {projects.map((item) => (
+                            {projects.slice(0, cnt == -1 ? projects.length : cnt).map((item) => (
                                 <div
                                     key={item.id}
                                     className="animate_top group relative rounded-2xl border border-stroke bg-white shadow-solid-10 dark:border-strokedark dark:bg-blacksection dark:shadow-none"
