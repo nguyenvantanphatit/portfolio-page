@@ -95,8 +95,8 @@ const projects: Projects[] = [
         sizeMember: 1
     },
 ]
-const detectMob = () => {
-    if (typeof window !== 'undefined') {
+export default function Projects() {
+    const detectMob = () => {
         const toMatch = [
             /Android/i,
             /webOS/i,
@@ -106,15 +106,11 @@ const detectMob = () => {
             /BlackBerry/i,
             /Windows Phone/i
         ];
-
+    
         return toMatch.some((toMatchItem) => {
             return navigator.userAgent.match(toMatchItem);
         });
     }
-
-    return false;
-}
-export default function Projects() {
     const [showLoadAllButton, setShowLoadAllButton] = useState(true);
     const [showHideButton, setShowHideButton] = useState(false);
     const [cnt, setCnt] = useState(detectMob() ? 2 : 4);
