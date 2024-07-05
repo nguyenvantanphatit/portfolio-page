@@ -82,6 +82,14 @@ export default function Skill() {
             return date >= threeMonthsAgo;
         });
     };
+    const transformDataMobile = (contributions) => {
+        const today = new Date();
+        const threeMonthsAgo = new Date(today.setMonth(today.getMonth() - 3));
+        return contributions.filter(day => {
+            const date = new Date(day.date);
+            return date >= threeMonthsAgo;
+        });
+    };
     return (
         <>
             <div className='flex justify-between flex-col md:flex-row items-center bg-slate-50 py-10'>
@@ -171,13 +179,22 @@ export default function Skill() {
                 
             </div>
             <section className="w-full xl:py-24 lg:py-20 py-12 bg-slate-50 border-b border-gray-300" id="contact">
-                <div className="w-full max-w-7xl px-6 lg:px-8 mx-auto">
+                <div className="w-full max-w-7xl px-6 lg:px-8 mx-auto  hidden md:flex">
                     <GitHubCalendar
                         username="nguyenvantanphatit"
                         blockSize={25}
                         blockMargin={10}
                         fontSize={16}
                         transformData={transformData}
+                    />
+                </div>
+                <div className="w-full max-w-7xl px-6 lg:px-8 mx-auto flex md:hidden">
+                    <GitHubCalendar
+                        username="nguyenvantanphatit"
+                        blockSize={25}
+                        blockMargin={10}
+                        fontSize={16}
+                        transformData={transformDataMobile}
                     />
                 </div>
             </section>
