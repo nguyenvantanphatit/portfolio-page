@@ -1,4 +1,5 @@
 "use client"
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 export default function Introduce() {
     const colors = [
@@ -44,10 +45,12 @@ export default function Introduce() {
                             <br className="hidden sm:block"></br>
                             I'm a Front-End Developer specializing in React.js, Next.js, and Angular with knowledge of Node.js.
                         </p>
-                        <div className='mt-4 items-center justify-center flex'>
+                        <div className='mt-4 items-center justify-center md:justify-start flex'>
+                            <a href="/pdf/CV_Nguyen_Van_Tan_Phat_Developer.pdf">
                                 <button className='button-dowload-cv rounded-full '>
                                     Dowload CV
                                 </button>
+                            </a>
                         </div>
                     </div>
                 </div>
