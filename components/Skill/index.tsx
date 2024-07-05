@@ -92,7 +92,7 @@ export default function Skill() {
     };
     return (
         <>
-            <div className='flex justify-between flex-col md:flex-row items-center bg-slate-50 py-10'>
+            <div className='flex justify-between flex-col md:flex-row items-center bg-slate-50 py-10 gap-8'>
             <div>
                 <motion.div
                     variants={{
