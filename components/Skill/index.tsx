@@ -92,8 +92,8 @@ export default function Skill() {
     };
     return (
         <>
-            <div className='flex justify-between flex-col md:flex-row items-center bg-slate-50 py-10 gap-8'>
-            <div>
+            <div className='flex justify-between flex-col md:flex-row items-center bg-slate-50 py-10'>
+            <div className='w-full md:w-1/2'>
                 <motion.div
                     variants={{
                         hidden: {
@@ -134,7 +134,7 @@ export default function Skill() {
                     viewport={{ once: true }}
                     className="animate_right w-full"
                 >
-                    <div className="grid grid-cols-3 gap-4 xl:grid-cols-6  px-4 sm:px-6 lg:px-8">
+                    <div className="grid grid-cols-3 gap-4 xl:grid-cols-5  px-4 sm:px-8">
                         {dataBrand.map((item) => (
                             <div key={item.id} className='pt-2 w-full rounded-2xl border border-gray-200 hover:border-indigo-600 hover:bg-blue-50 transition-all duration-700 ease-in-out flex-col justify-start items-center inline-flex'>
                                 <a href="#">
@@ -146,7 +146,7 @@ export default function Skill() {
                     </div>
                 </motion.div>
                 </div>
-                <div className="system w-full md:w-1/2">
+                <div className="system w-full md:w-3/5">
                     <div className="system__orbit system__orbit--sun">
                         <img src="/images/skill/nextjs.svg" alt="Sun" className="system__icon system__icon--sun" />
                     </div>
@@ -172,7 +172,7 @@ export default function Skill() {
                     </div>
                     <div className="system__orbit system__orbit--jupiter">
                         <div className="system__planet system__planet--jupiter">
-                            <img src="/images/skill/nodejs.svg" alt="Jupiter" />
+                            <img src="/images/skill/tailwind-css.svg" alt="Jupiter" />
                         </div>
                     </div>
                 </div>
