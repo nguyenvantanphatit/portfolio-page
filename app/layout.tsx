@@ -15,7 +15,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon1.png" />
       </Head>
       <body>
-        {/* <Header /> */}
+        <Header />
         {children}
         <Footer />
         <ScrollToTop />
