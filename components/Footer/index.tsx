@@ -3,7 +3,10 @@ import { motion } from "framer-motion";
 const Footer = () => {
     return (
         <>
-            <footer className="w-full bg-slate-50 ">
+            <div className="timeline">
+                <div className="line"></div>
+            </div>
+            <footer className="w-full bg-slate-50">
                 <div className="w-full max-w-7xl px-5 lg:px-8 mx-auto">
                     <div className="py-7 border-t ">
                         <div className="flex items-center justify-center flex-col lg:space-y-0 space-y-8 lg:justify-between lg:flex-row">
