@@ -110,7 +110,7 @@ export default function Contact() {
                         >
                             <form action="" className="h-fit bg-white border border-slate-200 rounded-2xl lg:p-12 p-8 w-full max-w-lg md:max-w-3xl lg:max-w-full mx-auto">
                                 <div className="relative mb-8">
-                                    <label className="flex  items-center mb-2 text-gray-600 text-base leading-6 font-medium">Name </label>
+                                    <label className="flex  items-center mb-2 text-gray-600 text-base leading-6 font-medium">Your Name ...</label>
                                     <div className="relative text-gray-500 focus-within:text-gray-900">
                                         <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none ">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -121,7 +121,7 @@ export default function Contact() {
                                     </div>
                                 </div>
                                 <div className="relative mb-8">
-                                    <label className="flex  items-center mb-2 text-gray-600 text-base leading-6 font-medium">Email </label>
+                                    <label className="flex  items-center mb-2 text-gray-600 text-base leading-6 font-medium">Your Email ...</label>
                                     <div className="relative text-gray-500 focus-within:text-gray-900">
                                         <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none ">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -132,13 +132,13 @@ export default function Contact() {
                                     </div>
                                 </div>
                                 <div className="relative mb-8">
-                                    <label className="flex  items-center mb-2 text-gray-600 text-base leading-6 font-medium">Message </label>
+                                    <label className="flex  items-center mb-2 text-gray-600 text-base leading-6 font-medium">Message ...</label>
                                     <div className="relative ">
                                         <textarea className="block w-full h-40 px-4 py-2.5 text-lg leading-7 font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-2xl placeholder-gray-400 focus:outline-none resize-none" placeholder="Write your message"></textarea>
                                     </div>
                                 </div>
                                 <button className="w-full h-12 rounded-full bg-indigo-600 hover:bg-indigo-900 transition-all duration-700 shadow-sm text-white text-base font-semibold leading-6 flex items-center justify-center">
-                                    <span className="px-2 font-semibold text-base leading-7 text-white">Send Message</span>
+                                    <span className="px-2 font-semibold text-base leading-7 text-white">Send Message ...</span>
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M11.3011 8.69881L8.17808 11.8219M8.62402 12.5906L8.79264 12.8819C10.3882 15.6378 11.1859 17.0157 12.2575 16.9066C13.3291 16.7974 13.8326 15.2869 14.8397 12.2658L16.2842 7.93214C17.2041 5.17249 17.6641 3.79266 16.9357 3.0643C16.2073 2.33594 14.8275 2.79588 12.0679 3.71577L7.73416 5.16033C4.71311 6.16735 3.20259 6.67086 3.09342 7.74246C2.98425 8.81406 4.36221 9.61183 7.11813 11.2074L7.40938 11.376C7.79182 11.5974 7.98303 11.7081 8.13747 11.8625C8.29191 12.017 8.40261 12.2082 8.62402 12.5906Z"
