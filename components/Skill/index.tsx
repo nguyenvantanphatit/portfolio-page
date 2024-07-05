@@ -146,7 +146,7 @@ export default function Skill() {
                     </div>
                 </motion.div>
                 </div>
-                <div className="system w-full md:w-3/5">
+                <div className="system w-full md:w-3/5 mt-6">
                     <div className="system__orbit system__orbit--sun">
                         <img src="/images/skill/nextjs.svg" alt="Sun" className="system__icon system__icon--sun" />
                     </div>

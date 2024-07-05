@@ -40,7 +40,7 @@ export default function Introduce() {
                         </div>
                     </div>
                     <div>
-                        <h3 className="font-manrope font-bold text-4xl text-gray-900 mb-1 max-sm:text-center">Tan Phat</h3>
+                        <h3 className="font-manrope font-bold text-4xl text-gray-900 mb-1 max-sm:text-center">Introduce</h3>
                         <p className="font-normal text-base leading-7 text-gray-500  max-sm:text-center">Welcome to my space! My name is  Nguyen Van Tan Phat.
                             <br className="hidden sm:block"></br>
                             I'm a Front-End Developer specializing in React.js, Next.js, and Angular with knowledge of Node.js.

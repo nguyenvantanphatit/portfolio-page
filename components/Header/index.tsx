@@ -11,7 +11,7 @@ const Header = () => {
                 </div>
                 <div className="flex items-center justify-center flex-col sm:flex-row max-sm:gap-5 sm:justify-between mb-5">
                     <div className="block">
-                        <h3 className="font-manrope font-bold text-4xl text-gray-900 mb-1 max-sm:text-center">Nguyen Van Tan Phat</h3>
+                        <h3 className="font-manrope font-bold text-4xl text-gray-900 mb-1 max-sm:text-center">Tan Phat</h3>
                     </div>
                     <div className="hidden md:block">
                         <Link href="/#contact"

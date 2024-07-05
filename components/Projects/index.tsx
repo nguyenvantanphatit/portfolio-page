@@ -147,6 +147,9 @@ export default function Projects() {
                         viewport={{ once: true }}
                         className="animate_right w-full"
                     >
+                        <div className="mb-8 text-center">
+                        <h1 className="text-4xl text-gray-900 text-center font-bold">Your Projects</h1>
+                    </div>
                         <div className="grid grid-cols-1 gap-6 xl:grid-cols-4">
                             {projects.slice(0, cnt == -1 ? projects.length : cnt).map((item) => (
                                 <div
