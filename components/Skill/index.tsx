@@ -149,22 +149,22 @@ export default function Skill() {
                     </div>
                     <div className="system__orbit system__orbit--venus">
                         <div className="system__planet system__planet--venus">
-                            <img src="/images/skill/angular.svg" alt="Venus" />
+                            <img src="/images/skill/typescript.svg" alt="Venus" />
                         </div>
                     </div>
                     <div className="system__orbit system__orbit--earth">
                         <div className="system__planet system__planet--earth">
-                            <img src="/images/skill/nodejs.svg" alt="Earth" />
+                            <img src="/images/skill/javascript.svg" alt="Earth" />
                         </div>
                     </div>
                     <div className="system__orbit system__orbit--mars">
                         <div className="system__planet system__planet--mars">
-                            <img src="/images/skill/typescript.svg" alt="Mars" />
+                            <img src="/images/skill/angular.svg" alt="Mars" />
                         </div>
                     </div>
                     <div className="system__orbit system__orbit--jupiter">
                         <div className="system__planet system__planet--jupiter">
-                            <img src="/images/skill/javascript.svg" alt="Jupiter" />
+                            <img src="/images/skill/nodejs.svg" alt="Jupiter" />
                         </div>
                     </div>
                 </div>
