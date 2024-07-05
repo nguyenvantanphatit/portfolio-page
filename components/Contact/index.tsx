@@ -55,7 +55,7 @@ export default function Contact() {
                                             </svg>
                                         </a>
                                         <h5 className="text-gray-900 text-xl font-semibold leading-8 mb-3 transition-all duration-500 group-hover:text-white">Support</h5>
-                                        <p className="text-gray-500 text-sm font-normal leading-5 transition-all duration-500 group-hover:text-white">We Provide Various Methods For You To Carry Out All</p>
+                                        <p className="text-gray-500 text-sm font-normal leading-5 transition-all duration-500 group-hover:text-white">(+84) 374 225 294</p>
                                     </div>
                                     <div className="rounded-2xl border border-gray-200 bg-white p-7 group transition-all duration-500 hover:bg-indigo-600">
                                         <a href="javascript:;" className="w-14 h-14 bg-indigo-600 rounded-full flex items-center justify-center mb-5 transition-all duration-500 group-hover:bg-white cursor-pointer">
@@ -63,8 +63,8 @@ export default function Contact() {
                                                 <path d="M8.5 10.25H15.25M8.5 15.25H21.5M10.6687 23.75C9.72032 23.75 9.24614 23.75 8.81368 23.916C7.17055 24.5465 4.98937 27.2387 3.24145 26.4602C2.5 26.13 2.5 24.9239 2.5 22.5116C2.5 20.6459 2.5 15.9678 2.5 11.7499C2.5 7.97876 2.5 6.09318 3.67157 4.92161C4.84314 3.75004 6.72865 3.75004 10.4997 3.75003C13.4302 3.75003 16.6564 3.75002 19.5037 3.75002C23.2725 3.75001 25.1568 3.75 26.3284 4.92158C27.5 6.09315 27.5 7.97875 27.5 11.7499C27.5 13.0803 27.5 14.4198 27.5 15.7501C27.5 19.5213 27.5 21.4069 26.3284 22.5785C25.1569 23.75 23.2712 23.75 19.5 23.75C16.5562 23.75 13.6125 23.75 10.6687 23.75Z" stroke="" stroke-width="2" stroke-linecap="round" />
                                             </svg>
                                         </a>
-                                        <h5 className="text-gray-900 text-xl font-semibold leading-8 mb-3 transition-all duration-500 group-hover:text-white">Pagedone Blog</h5>
-                                        <p className="text-gray-500 text-sm font-normal leading-5 transition-all duration-500 group-hover:text-white"></p>
+                                        <h5 className="text-gray-900 text-xl font-semibold leading-8 mb-3 transition-all duration-500 group-hover:text-white">Gmail Contact</h5>
+                                        <p className="text-gray-500 text-sm font-normal leading-5 transition-all duration-500 group-hover:text-white">nguyenvantanphat.it@gmail.com</p>
                                     </div>
                                 </div>
                                 <div className="border-t border-slate-200 pt-12 flex justify-center">
@@ -110,18 +110,18 @@ export default function Contact() {
                         >
                             <form action="" className="h-fit bg-white border border-slate-200 rounded-2xl lg:p-12 p-8 w-full max-w-lg md:max-w-3xl lg:max-w-full mx-auto">
                                 <div className="relative mb-8">
-                                    <label className="flex  items-center mb-2 text-gray-600 text-base leading-6 font-medium">Your Name ...</label>
+                                    <label className="flex  items-center mb-2 text-gray-600 text-base leading-6 font-medium">Your Name</label>
                                     <div className="relative text-gray-500 focus-within:text-gray-900">
                                         <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none ">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M20 21C20 18.1716 20 16.7574 19.1213 15.8787C18.2426 15 16.8284 15 14 15H10C7.17157 15 5.75736 15 4.87868 15.8787C4 16.7574 4 18.1716 4 21M12.1441 11C12.0541 10.991 11.9459 10.991 11.8468 11C9.7027 10.9278 8 9.16911 8 7.00451C8 4.79481 9.78378 3 12 3C14.2072 3 16 4.79481 16 7.00451C15.991 9.16911 14.2883 10.9278 12.1441 11Z" stroke="#111827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                             </svg>
                                         </div>
-                                        <input type="text" id="default-search" className="w-full block h-12 pr-5 pl-12 py-2.5 text-lg leading-7 font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none" placeholder="harsh" />
+                                        <input type="text" id="default-search" className="w-full block h-12 pr-5 pl-12 py-2.5 text-lg leading-7 font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none" placeholder="Your Name" />
                                     </div>
                                 </div>
                                 <div className="relative mb-8">
-                                    <label className="flex  items-center mb-2 text-gray-600 text-base leading-6 font-medium">Your Email ...</label>
+                                    <label className="flex  items-center mb-2 text-gray-600 text-base leading-6 font-medium">Your Email</label>
                                     <div className="relative text-gray-500 focus-within:text-gray-900">
                                         <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none ">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -132,13 +132,13 @@ export default function Contact() {
                                     </div>
                                 </div>
                                 <div className="relative mb-8">
-                                    <label className="flex  items-center mb-2 text-gray-600 text-base leading-6 font-medium">Message ...</label>
+                                    <label className="flex  items-center mb-2 text-gray-600 text-base leading-6 font-medium">Message</label>
                                     <div className="relative ">
                                         <textarea className="block w-full h-40 px-4 py-2.5 text-lg leading-7 font-normal shadow-xs text-gray-900 bg-transparent border border-gray-300 rounded-2xl placeholder-gray-400 focus:outline-none resize-none" placeholder="Write your message"></textarea>
                                     </div>
                                 </div>
                                 <button className="w-full h-12 rounded-full bg-indigo-600 hover:bg-indigo-900 transition-all duration-700 shadow-sm text-white text-base font-semibold leading-6 flex items-center justify-center">
-                                    <span className="px-2 font-semibold text-base leading-7 text-white">Send Message ...</span>
+                                    <span className="px-2 font-semibold text-base leading-7 text-white">Send Message</span>
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M11.3011 8.69881L8.17808 11.8219M8.62402 12.5906L8.79264 12.8819C10.3882 15.6378 11.1859 17.0157 12.2575 16.9066C13.3291 16.7974 13.8326 15.2869 14.8397 12.2658L16.2842 7.93214C17.2041 5.17249 17.6641 3.79266 16.9357 3.0643C16.2073 2.33594 14.8275 2.79588 12.0679 3.71577L7.73416 5.16033C4.71311 6.16735 3.20259 6.67086 3.09342 7.74246C2.98425 8.81406 4.36221 9.61183 7.11813 11.2074L7.40938 11.376C7.79182 11.5974 7.98303 11.7081 8.13747 11.8625C8.29191 12.017 8.40261 12.2082 8.62402 12.5906Z"
