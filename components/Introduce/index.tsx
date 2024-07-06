@@ -43,7 +43,7 @@ export default function Introduce() {
                         <h3 className="font-manrope font-bold text-4xl text-gray-900 mb-1 max-sm:text-center">Introduce</h3>
                         <p className="font-normal text-base leading-7 text-gray-500  max-sm:text-center">Welcome to my space! My name is  Nguyen Van Tan Phat.
                             <br className="hidden sm:block"></br>
-                            I'm a Front-End Developer specializing in React.js, Next.js, and Angular with knowledge of Node.js.
+                            I'm a Front-End Developer with many years of experience developing web applications using modern technologies such as React.js, Next.js, and Angular. I also have extensive knowledge of Node.js, which helps me build comprehensive and optimized web applications. I have worked on real projects such as landing pages, e-commerce, news, and dashboards.
                         </p>
                         <div className='mt-4 items-center justify-center md:justify-start hidden md:flex'>
                             <a href="/pdf/CV_Nguyen_Van_Tan_Phat_Developer.pdf">
