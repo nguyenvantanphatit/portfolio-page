@@ -184,13 +184,13 @@ export default function Projects() {
                                                 <Modal
                                                     showCloseButton
                                                     visibleModal={showModal}
-                                                    wrapperClassName="!w-[450px]"
+                                                    wrapperClassName="!w-[340px] md:!w-[400px]"
                                                     contentClassName="!min-h-[0]"
                                                     onClose={() => setshowModal(false)}
                                                 >
                                                     <div>
                                                         <p className="text-2xl text-center mb-4 font-bold mt-2 text-[#4F46FF]">{selectedProject.label}</p>
-                                                        <p style={{ width: "360px" }} className="text-lg text-center mx-auto">{selectedProject.desc}</p>
+                                                        <p className="text-lg text-start px-4 w-[320px] md:w-[360px]">{selectedProject.desc}</p>
                                                     </div>
                                                 </Modal>
                                             )}

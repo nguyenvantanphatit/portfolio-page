@@ -26,13 +26,13 @@ const Modal = ({
   return (
     <>
       <div
-        className={`m-auto justify-center items-center flex overflow-hidden fixed inset-0 z-[101] outline-none focus:outline-none transition-all duration-300 w-[100%] sm:w-[940px] ${wrapperClassName} ${(visibleModal ? "visible opacity-1" : "invisible opacity-0")
+        className={`m-auto justify-center items-center flex overflow-hidden fixed inset-0 z-[101] outline-none focus:outline-none transition-all duration-300 w-[90%] sm:w-[940px] ${wrapperClassName} ${(visibleModal ? "visible opacity-1" : "invisible opacity-0")
           }`}
       >
         <div
           style={{
           }}
-          className={`relative p-4 md:p-4 rounded-3xl border border-[#4F46FF] overflow-y-auto max-h-[95vh] min-h-[460px] w-full bg-slate-50  bottom-0 sm:bottom-auto sm:block ${contentClassName}`}
+          className={`relative p-4 md:p-4 rounded-3xl border border-[#4F46FF]  max-h-[95vh] min-h-[460px] w-full bg-slate-50  bottom-0 sm:bottom-auto sm:block ${contentClassName}`}
         >
           {showCloseButton && (
             <button onClick={onClose} className="absolute top-6 right-6">
