@@ -1,6 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
 import React, { useState } from 'react'
+import Modal from "../Modal/Modal";
+import Link from "next/link";
 export type Projects = {
     id: number;
     image: string;
@@ -21,7 +23,7 @@ const projects: Projects[] = [
         tech: "NextJs, NodeJs, Mysql, Tailwind CSS",
         role: "FE, BE",
         live_demo: "https://echomedi.com",
-        desc: "",
+        desc: "Ecommerce",
         sizeMember: 3
 
     },
@@ -33,65 +35,65 @@ const projects: Projects[] = [
         tech: "NextJs, NodeJs, Mysql, Tailwind CSS",
         role: "FE, BE",
         live_demo: "https://suckhoe.echomedi.com",
-        desc: "",
-        sizeMember: 1
-
-    },
-    {
-        id: 1,
-        image: '/images/projects/echomedi.png',
-        label: "Wheel Of Fortune",
-        time: "02/2024 - 2024",
-        tech: "NextJs, Tailwind CSS",
-        role: "FE, BE",
-        live_demo: "https://luckyechomedi.vercel.app",
-        desc: "",
+        desc: "Echo Medi Blog using Nextjs, Tailwind Css, NodeJs",
         sizeMember: 1
 
     },
     {
         id: 2,
         image: '/images/projects/echomedi.png',
+        label: "Wheel Of Fortune",
+        time: "02/2024 - 2024",
+        tech: "NextJs, Tailwind CSS",
+        role: "FE, BE",
+        live_demo: "https://luckyechomedi.vercel.app",
+        desc: "Wheel Of Fortune using Nextjs",
+        sizeMember: 1
+
+    },
+    {
+        id: 3,
+        image: '/images/projects/echomedi.png',
         label: "Luna Project",
         time: "11/2023 - 1/2024",
         tech: "ReactJs, NodeJs, Mysql, Antd",
         role: "FE, BE",
         live_demo: "",
-        desc: "",
+        desc: "Manufacturing company department management software integrates drag and drop technology, real-time and other functions to help reduce manual work from Client, Staff, Product, Quotation, Purchase Order, Manufacturing and Payment.",
         sizeMember: 6
     },
     {
-        id: 3,
+        id: 4,
         image: '/images/projects/dohbo.png',
         label: "Dohbo Janpan",
         time: "08/2023 - 10/2023",
         tech: "Angular, Antd",
         role: "FE",
         live_demo: "",
-        desc: "",
+        desc: "Gift code: ZaloPay, Fix UI, Hide and show history, lottery, form",
         sizeMember: 6
     },
     {
-        id: 4,
+        id: 5,
         image: '/images/projects/vjp-connect-platform.png',
         label: "VJP Connect Platform",
         time: "06/2023 - 07/2023",
         tech: "ReactJs, NodeJs, Mysql, Antd",
         role: "FE, BE",
         live_demo: "https://www.vjp-connect.com",
-        desc: "",
+        desc: "Connecting events for Japanese businesses using English, Vietnamese and Japanese",
         sizeMember: 4
 
     },
     {
-        id: 5,
+        id: 6,
         image: '/images/projects/echomedi.png',
         label: "Portfolio Page",
         time: "07/2024",
         tech: "NextJs, Tailwind CSS",
         role: "FE",
         live_demo: "https://tanphat-profile.netlify.app",
-        desc: "",
+        desc: "Portfolio Page using NextJs app router",
         sizeMember: 1
     },
 ]
@@ -106,7 +108,7 @@ export default function Projects() {
             /BlackBerry/i,
             /Windows Phone/i
         ];
-    
+
         return toMatch.some((toMatchItem) => {
             return navigator.userAgent.match(toMatchItem);
         });
@@ -124,6 +126,13 @@ export default function Projects() {
         setCnt(detectMob() ? 2 : 8);
         setShowLoadAllButton(true);
         setShowHideButton(false);
+    };
+    const [showModal, setshowModal] = useState(false);
+    const [selectedProject, setSelectedProject] = useState<Projects | null>(null);
+
+    const handleReadMore = (project: Projects) => {
+        setSelectedProject(project);
+        setshowModal(true);
     };
     return (
         <>
@@ -148,8 +157,8 @@ export default function Projects() {
                         className="animate_right w-full"
                     >
                         <div className="mb-8 text-center">
-                        <h1 className="text-4xl text-gray-900 text-center font-bold">Your Projects</h1>
-                    </div>
+                            <h1 className="text-4xl text-gray-900 text-center font-bold">Your Projects</h1>
+                        </div>
                         <div className="grid grid-cols-1 gap-6 xl:grid-cols-4">
                             {projects.slice(0, cnt == -1 ? projects.length : cnt).map((item) => (
                                 <div
@@ -170,7 +179,21 @@ export default function Projects() {
                                                     </a>
                                                 </button>
                                             )}
-                                            <button className="bg-indigo-600 hover:bg-indigo-700 shadow-sm rounded-full py-2 px-5 text-xs text-white font-semibold">Read More</button>
+                                            <button onClick={() => handleReadMore(item)} className="bg-indigo-600 hover:bg-indigo-700 shadow-sm rounded-full py-2 px-5 text-xs text-white font-semibold">Read More</button>
+                                            {selectedProject && (
+                                                <Modal
+                                                    showCloseButton
+                                                    visibleModal={showModal}
+                                                    wrapperClassName="!w-[450px]"
+                                                    contentClassName="!min-h-[0]"
+                                                    onClose={() => setshowModal(false)}
+                                                >
+                                                    <div>
+                                                        <p className="text-2xl text-center mb-4 font-bold mt-2 text-[#4F46FF]">{selectedProject.label}</p>
+                                                        <p style={{ width: "360px" }} className="text-lg text-center mx-auto">{selectedProject.desc}</p>
+                                                    </div>
+                                                </Modal>
+                                            )}
                                         </div>
                                     </div>
                                 </div>

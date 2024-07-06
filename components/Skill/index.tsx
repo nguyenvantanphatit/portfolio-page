@@ -112,7 +112,7 @@ export default function Skill() {
                     viewport={{ once: true }}
                     className="animate_left w-full"
                 >
-                    <div className="my-10 text-center">
+                    <div className="my-10 text-center" id='skill'>
                         <h1 className="text-4xl text-gray-900 text-center font-bold">Your Skills</h1>
                     </div>
                 </motion.div>
@@ -146,7 +146,7 @@ export default function Skill() {
                     </div>
                 </motion.div>
                 </div>
-                <div className="system w-full md:w-3/5 mt-6">
+                <div className="system w-full md:w-3/5 mt-12">
                     <div className="system__orbit system__orbit--sun">
                         <img src="/images/skill/nextjs.svg" alt="Sun" className="system__icon system__icon--sun" />
                     </div>
@@ -178,7 +178,7 @@ export default function Skill() {
                 </div>
                 
             </div>
-            <section className="w-full xl:py-24 lg:py-20 py-12 bg-slate-50 border-b border-gray-300" id="contact">
+            <section className="w-full xl:py-24 lg:py-20 py-12 bg-slate-50 border-b border-gray-300">
                 <div className="w-full max-w-7xl px-6 lg:px-8 mx-auto  hidden md:flex">
                     <GitHubCalendar
                         username="nguyenvantanphatit"
