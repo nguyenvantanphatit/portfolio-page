@@ -75,7 +75,7 @@ const dataBrand: DataBrand[] = [
 export default function Skill() {
     const transformData = (contributions) => {
         const today = new Date();
-        const threeMonthsAgo = new Date(today.setMonth(today.getMonth() - 6));
+        const threeMonthsAgo = new Date(today.setMonth(today.getMonth() - 8));
     
         return contributions.filter(day => {
             const date = new Date(day.date);
