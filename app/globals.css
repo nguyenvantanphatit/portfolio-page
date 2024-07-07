@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-  
+
 
 .testimonial-01 .swiper-pagination-bullet {
   @apply h-2.5 w-2.5 bg-stroke opacity-100;
@@ -128,9 +128,12 @@ pre {
 .active-tab {
   @apply bg-stroke text-black dark:bg-blackho dark:text-white;
 }
-html, body {
+
+html,
+body {
   overflow-x: hidden;
 }
+
 /* .slider {
   position: relative;
   width: 100%;
@@ -885,4 +888,3 @@ html, body {
     width: 100%;
   }
 }
-
