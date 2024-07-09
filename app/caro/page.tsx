@@ -1,7 +1,6 @@
-"use client"
+"use client";
 import { useEffect, useRef, useState } from 'react';
-import styles from '../Carousel.module.css';
-import fruit_strawberry from "../img/fruit_strawberry.png"
+
 const Carousel = () => {
   const listRef = useRef<(HTMLDivElement | null)[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -28,17 +27,17 @@ const Carousel = () => {
 
   useEffect(() => {
     const handleCarouselChange = () => {
-      const hiddenOld = document.querySelector(`.${styles.hidden}`) as HTMLElement;
-      if (hiddenOld) hiddenOld.classList.remove(styles.hidden);
+      const hiddenOld = document.querySelector('.hidden') as HTMLElement;
+      if (hiddenOld) hiddenOld.classList.remove('hidden');
 
-      const activeOld = document.querySelector(`.${styles.active}`) as HTMLElement;
+      const activeOld = document.querySelector('.active') as HTMLElement;
       if (activeOld) {
-        activeOld.classList.remove(styles.active);
-        activeOld.classList.add(styles.hidden);
+        activeOld.classList.remove('active');
+        activeOld.classList.add('hidden');
       }
 
       if (listRef.current[activeIndex]) {
-        listRef.current[activeIndex]?.classList.add(styles.active);
+        listRef.current[activeIndex]?.classList.add('active');
       }
 
       if (mockupRef.current) {
@@ -53,25 +52,25 @@ const Carousel = () => {
   }, [activeIndex, leftMockup]);
 
   return (
-    <div className={styles.carousel}>
-      <div className={styles.list}>
-        <div className={`${styles.item} ${styles.active}`} style={{ '--background': '#EA3D41' } as React.CSSProperties} ref={(el) => (listRef.current[0] = el)}>
-          <div className={styles.content}>Strawberry</div>
-          <img src="/images/caro/fruit_strawberry.png" className={styles.fruit} />
+    <div className="carousel">
+      <div className="list">
+        <div className="item active" style={{ '--background': '#EA3D41' } as React.CSSProperties} ref={(el) => (listRef.current[0] = el)}>
+          <div className="content">Strawberry</div>
+          <img src="/images/caro/fruit_strawberry.png" className="fruit" />
         </div>
-        <div className={styles.item} style={{ '--background': '#2D5643' } as React.CSSProperties} ref={(el) => (listRef.current[1] = el)}>
-          <div className={styles.content}>Avocado</div>
-          <img src="/images/caro/fruit_avocado.png" className={styles.fruit} />
+        <div className="item" style={{ '--background': '#2D5643' } as React.CSSProperties} ref={(el) => (listRef.current[1] = el)}>
+          <div className="content">Avocado</div>
+          <img src="/images/caro/fruit_avocado.png" className="fruit" />
         </div>
-        <div className={styles.item} style={{ '--background': '#E7A043' } as React.CSSProperties} ref={(el) => (listRef.current[2] = el)}>
-          <div className={styles.content}>Orange</div>
-          <img src="/images/caro/fruit_orange.png" className={styles.fruit} />
+        <div className="item" style={{ '--background': '#E7A043' } as React.CSSProperties} ref={(el) => (listRef.current[2] = el)}>
+          <div className="content">Orange</div>
+          <img src="/images/caro/fruit_orange.png" className="fruit" />
         </div>
       </div>
-      <div className={styles.leaves}></div>
-      <div className={styles.mockup} ref={mockupRef}></div>
-      <div className={styles.shadow}></div>
-      <div className={styles.arrow}>
+      <div className="leaves"></div>
+      <div className="mockup" ref={mockupRef}></div>
+      <div className="shadow"></div>
+      <div className="arrow">
         <button id="prev" onClick={handlePrev}>{'<'}</button>
         <button id="next" onClick={handleNext}>{'>'}</button>
       </div>
