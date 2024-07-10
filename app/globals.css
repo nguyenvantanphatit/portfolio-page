@@ -1,11 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-:root{
+/* :root{
   --width-mockup: calc(371px / 1.5);
   --height-mockup: calc(673px / 1.5);
-}
-
+} */
 
 .testimonial-01 .swiper-pagination-bullet {
   @apply h-2.5 w-2.5 bg-stroke opacity-100;
@@ -892,7 +891,7 @@ body {
   }
 }
 
-.carousel{
+/* .carousel{
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -1068,4 +1067,4 @@ body {
       height: 100%;
       object-fit: cover;
   }
-}
+} */
