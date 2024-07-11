@@ -45,14 +45,14 @@ export default function Introduce() {
                             I'm a Front-End Developer with many years of experience developing web applications using modern technologies such as React.js, Next.js, and Angular. I also have extensive knowledge of Node.js, which helps me build comprehensive and optimized web applications. I have worked on real projects such as landing pages, e-commerce, news, and dashboards.
                         </p>
                         <div className='mt-4 items-center justify-center md:justify-start hidden md:flex'>
-                            <a href="/pdf/CV_Nguyen_Van_Tan_Phat_Developer.pdf">
+                            <a href="/pdf/CV_Nguyen_Van_Tan_Phat_Fron_End_Developer.pdf">
                                 <button className='button-dowload-cv rounded-full '>
                                     Dowload CV
                                 </button>
                             </a>
                         </div>
                         <div className='mt-4 items-center justify-center md:justify-start flex md:hidden'>
-                            <a href="/pdf/CV_Nguyen_Van_Tan_Phat_Developer.pdf">
+                            <a href="/pdf/CV_Nguyen_Van_Tan_Phat_Fron_End_Developer.pdf">
                                 <button className='button-dowload-cv-mobile rounded-full '>
                                     Dowload CV
                                 </button>
