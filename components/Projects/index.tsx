@@ -41,7 +41,7 @@ const projects: Projects[] = [
     },
     {
         id: 2,
-        image: '/images/projects/echomedi.png',
+        image: '/images/projects/luckyechomedi.png',
         label: "Wheel Of Fortune",
         time: "02/2024 - 2024",
         tech: "NextJs, Tailwind CSS",
@@ -87,7 +87,7 @@ const projects: Projects[] = [
     },
     {
         id: 6,
-        image: '/images/projects/echomedi.png',
+        image: '/images/projects/portfoliopage.png',
         label: "Portfolio Page",
         time: "07/2024",
         tech: "NextJs, Tailwind CSS",
