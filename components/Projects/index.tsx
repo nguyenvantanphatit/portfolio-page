@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import React, { useState } from 'react'
 import Modal from "../Modal/Modal";
-import Link from "next/link";
 export type Projects = {
     id: number;
     image: string;
@@ -92,12 +91,12 @@ const projects: Projects[] = [
         time: "07/2024",
         tech: "NextJs, Tailwind CSS",
         role: "FE",
-        live_demo: "https://tanphat-profile.netlify.app",
+        live_demo: "https://portfolio-page-it.vercel.app",
         desc: "Portfolio Page using NextJs app router",
         sizeMember: 1
     },
 ]
-export default function Projects() {
+const Projects = () => {
     const detectMob = () => {
         const toMatch = [
             /Android/i,
@@ -227,3 +226,4 @@ export default function Projects() {
         </>
     )
 }
+export default Projects;
