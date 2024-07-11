@@ -72,6 +72,7 @@ const dataBrand: DataBrand[] = [
 
 
 ]
+
 export default function Skill() {
     const transformData = (contributions) => {
         const today = new Date();
