@@ -2,18 +2,8 @@
 import { motion } from "framer-motion";
 import React, { useState } from 'react'
 import Modal from "../Modal/Modal";
-export type Projects = {
-    id: number;
-    image: string;
-    label: string;
-    time: string;
-    tech: string;
-    role: string;
-    live_demo: string;
-    desc: string;
-    sizeMember: number;
-};
-const projects: Projects[] = [
+import { Project } from "@/types/projects";
+const projects: Project[] = [
     {
         id: 1,
         image: '/images/projects/echomedi.png',
@@ -127,9 +117,9 @@ const Projects = () => {
         setShowHideButton(false);
     };
     const [showModal, setshowModal] = useState(false);
-    const [selectedProject, setSelectedProject] = useState<Projects | null>(null);
+    const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-    const handleReadMore = (project: Projects) => {
+    const handleReadMore = (project: Project) => {
         setSelectedProject(project);
         setshowModal(true);
     };

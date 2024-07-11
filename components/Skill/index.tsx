@@ -2,12 +2,8 @@
 import React from 'react'
 import { motion } from "framer-motion";
 import GitHubCalendar from "react-github-calendar";
-export type DataBrand = {
-    id: number;
-    image: string;
-    label: string;
-};
-const dataBrand: DataBrand[] = [
+import { DataSkill } from '@/types/skill';
+const dataBrand: DataSkill[] = [
     {
         id: 1,
         image: '/images/skill/nextjs.svg',

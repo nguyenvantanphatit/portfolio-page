@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 const Header = () => {
     return (
         <section className="relative md:pt-40 pt-28 pb-10 bg-slate-50">
