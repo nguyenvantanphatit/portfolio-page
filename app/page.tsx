@@ -26,6 +26,28 @@ export const metadata: Metadata = {
       }
     ]
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Tấn Phát Software Engineer',
+    description: 'Tấn Phát Software Engineer',
+    siteId: '1467726470533754880',
+    creator: '@your_twitter_handle',
+    creatorId: '1467726470533754880',
+    images: ['https://res.cloudinary.com/dq49gyq1g/image/upload/v1720057490/aqfvydnqjwbzhoniyio9.png'], 
+  },
+  robots: {
+    index: false,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: false,
+      noimageindex: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 
