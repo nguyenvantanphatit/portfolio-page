@@ -355,11 +355,11 @@ body {
 }
 
 .system__orbit.system__orbit--jupiter {
-  animation-duration: 15.8s;
+  animation-duration: 12.8s;
 }
 
 .system__orbit.system__orbit--saturn {
-  animation-duration: 120.3s;
+  animation-duration: 20.3s;
 }
 
 .system__orbit.system__orbit--uranus {
