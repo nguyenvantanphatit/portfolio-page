@@ -32,7 +32,9 @@ export default function Introduce() {
                             <div className="ring ring1">
                                 <div className="ring ring2">
                                     <div className="ring ring3">
-                                        <div className="ring ring4"></div>
+                                        <div className="ring ring4">
+                                        <div className="ring ring5"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -40,7 +42,7 @@ export default function Introduce() {
                     </div>
                     <div>
                         <h3 className="font-manrope font-bold text-4xl text-gray-900 mb-1 max-sm:text-center" id='introduce'>Introduce</h3>
-                        <p className="font-normal text-base leading-7 text-gray-500  max-sm:text-center">Welcome to my space! My name is  Nguyen Van Tan Phat.
+                        <p className="font-normal text-base leading-7 text-gray-500 text-justify">Welcome to my space! My name is  Nguyen Van Tan Phat.
                             <br className="hidden sm:block"></br>
                             I'm a Front-End Developer with many years of experience developing web applications using modern technologies such as React.js, Next.js, and Angular. I also have extensive knowledge of Node.js, which helps me build comprehensive and optimized web applications. I have worked on real projects such as landing pages, e-commerce, news, and dashboards.
                         </p>

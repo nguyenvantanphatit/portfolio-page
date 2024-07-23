@@ -25,12 +25,20 @@ const Header = () => {
                         </a>
                     </div>
                 </div>
-                <div className="flex max-sm:flex-wrap max-sm:justify-between items-center gap-28">
-                    <Image src="/images/banner/Logo.svg" width={150} height={150} className="custom-spin-slow" alt="Logo" />
-                    <a href="/#introduce" className="rounded-full py-3 px-6 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm leading-6 transition-all duration-500 ">About</a>
-                    <a href="/#skill" className="rounded-full py-3 px-6 bg-indigo-600 hoverbg-indigo-700 text-white font-semibold text-sm leading-6 transition-all duration-500 ">Skills</a>
-                    <a href="/#projects" className="rounded-full py-3 px-6 bg-indigo-600 hoverbg-indigo-700 text-white font-semibold text-sm leading-6 transition-all duration-500 ">Projects</a>
-                    <div className="flex items-center justify-center">
+                <div className="flex max-sm:flex-wrap max-sm:justify-between items-center">
+                    <div className="md:relative">
+                        <Image src="/images/banner/Logo.svg" width={150} height={150} className="custom-spin-slow hidden md:block" alt="Logo" />
+                        <a href="/#introduce" className="md:absolute md:left-8 md:top-12 rounded-full py-3 px-6 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm leading-6 transition-all duration-500 ">About</a>
+                    </div>
+                    <div className="md:relative">
+                        <Image src="/images/banner/Logo.svg" width={150} height={150} className="custom-spin-slow hidden md:block" alt="Logo" />
+                        <a href="/#skill" className="md:absolute md:left-8 md:top-12 rounded-full py-3 px-6 bg-indigo-600 hoverbg-indigo-700 text-white font-semibold text-sm leading-6 transition-all duration-500 ">Skills</a>
+                    </div>
+                    <div className="md:relative">
+                        <Image src="/images/banner/Logo.svg" width={150} height={150} className="custom-spin-slow hidden md:block" alt="Logo" />
+                        <a href="/#projects" className="md:absolute md:left-6 md:top-12 rounded-full py-3 px-6 bg-indigo-600 hoverbg-indigo-700 text-white font-semibold text-sm leading-6 transition-all duration-500 ">Projects</a>
+                    </div>
+                    <div className="flex items-center justify-center mt-12 md:mt-0">
                         <span className="loader"></span>
                         <span className="loader"></span>
                         <span className="loader"></span>
@@ -38,7 +46,6 @@ const Header = () => {
                         <span className="loader"></span>
                     </div>
                 </div>
-
             </div>
         </section>
     );

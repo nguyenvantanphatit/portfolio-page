@@ -329,7 +329,7 @@ body {
   }
 }
 .custom-spin-slow {
-  animation: spin-text 3s linear infinite; 
+  animation: spin-text 5s linear infinite; 
 }
 @keyframes spin-text {
   to {
@@ -766,8 +766,8 @@ body {
 }
 
 .ring4 {
-  height: 5rem;
-  width: 5rem;
+  height: 8rem;
+  width: 8rem;
   animation: glow4 2.5s infinite;
 }
 
@@ -784,7 +784,25 @@ body {
     background-color: var(--golden-glow);
   }
 }
+.ring5 {
+  height: 4.5rem;
+  width: 4.5rem;
+  animation: glow5 2.5s infinite;
+}
 
+@keyframes glow5 {
+  0% {
+    background-color: #ececec;
+  }
+
+  20% {
+    background-color: var(--golden-glow);
+  }
+
+  100% {
+    background-color: var(--golden-glow);
+  }
+}
 .choose-theme {
   margin-top: 5rem;
   display: flex;
