@@ -328,6 +328,15 @@ body {
     padding-top: 700px;
   }
 }
+.custom-spin-slow {
+  animation: spin-text 3s linear infinite; 
+}
+@keyframes spin-text {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 
 .system__orbit {
   position: absolute;
