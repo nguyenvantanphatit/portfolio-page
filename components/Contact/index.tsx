@@ -67,7 +67,7 @@ export default function Contact() {
                                         <p className="text-gray-500 text-sm font-normal leading-5 transition-all duration-500 group-hover:text-white">nguyenvantanphat.it@gmail.com</p>
                                     </div>
                                 </div>
-                                <div className="border-t border-slate-200 pt-12 flex justify-center">
+                                <div className="border-t border-slate-200 pt-12 justify-center hidden md:block">
                                     <span className="dot w-3 h-3 inline-block bg-gray-900 rounded-full mr-2"></span>
                                     <span className="dot w-3 h-3 inline-block bg-gray-500 rounded-full mr-2"></span>
                                     <span className="dot w-3 h-3 inline-block bg-red-600 rounded-full mr-2"></span>
@@ -87,6 +87,34 @@ export default function Contact() {
                                     <span className="dot w-3 h-3 inline-block bg-indigo-600 rounded-full mr-2"></span>
                                     <span className="dot w-3 h-3 inline-block bg-purple-500 rounded-full mr-2"></span>
                                     <span className="dot w-3 h-3 inline-block bg-orange-500 rounded-full mr-2"></span>
+                                    <span className="dot w-3 h-3 inline-block bg-gray-900 rounded-full mr-2"></span>
+                                    <span className="dot w-3 h-3 inline-block bg-gray-500 rounded-full mr-2"></span>
+                                    <span className="dot w-3 h-3 inline-block bg-red-600 rounded-full mr-2"></span>
+                                    <span className="dot w-3 h-3 inline-block bg-yellow-500 rounded-full mr-2"></span>
+                                    <span className="dot w-3 h-3 inline-block bg-green-500 rounded-full mr-2"></span>
+                                    <span className="dot w-3 h-3 inline-block bg-blue-500 rounded-full mr-2"></span>
+                                    <span className="dot w-3 h-3 inline-block bg-indigo-600 rounded-full mr-2"></span>
+                                    <span className="dot w-3 h-3 inline-block bg-purple-500 rounded-full mr-2"></span>
+                                    <span className="dot w-3 h-3 inline-block bg-orange-500 rounded-full mr-2"></span>
+                                </div>
+                                <div className="border-t border-slate-200 pt-12 justify-center block md:hidden">
+                                    <span className="dot w-3 h-3 inline-block bg-gray-900 rounded-full mr-2"></span>
+                                    <span className="dot w-3 h-3 inline-block bg-gray-500 rounded-full mr-2"></span>
+                                    <span className="dot w-3 h-3 inline-block bg-red-600 rounded-full mr-2"></span>
+                                    <span className="dot w-3 h-3 inline-block bg-yellow-500 rounded-full mr-2"></span>
+                                    <span className="dot w-3 h-3 inline-block bg-green-500 rounded-full mr-2"></span>
+                                    <span className="dot w-3 h-3 inline-block bg-blue-500 rounded-full mr-2"></span>
+                                    <span className="dot w-3 h-3 inline-block bg-indigo-600 rounded-full mr-2"></span>
+                                    <span className="dot w-3 h-3 inline-block bg-purple-500 rounded-full mr-2"></span>
+                                    <span className="dot w-3 h-3 inline-block bg-orange-500 rounded-full mr-2"></span>
+                                    <span className="dot w-3 h-3 inline-block bg-pink-500 rounded-full mr-2"></span>
+                                    <span className="dot w-3 h-3 inline-block bg-gray-900 rounded-full mr-2"></span>
+                                    <span className="dot w-3 h-3 inline-block bg-gray-500 rounded-full mr-2"></span>
+                                    <span className="dot w-3 h-3 inline-block bg-red-600 rounded-full mr-2"></span>
+                                    <span className="dot w-3 h-3 inline-block bg-yellow-500 rounded-full mr-2"></span>
+                                    <span className="dot w-3 h-3 inline-block bg-green-500 rounded-full mr-2"></span>
+                                    <span className="dot w-3 h-3 inline-block bg-blue-500 rounded-full mr-2"></span>
+                                    <span className="dot w-3 h-3 inline-block bg-indigo-600 rounded-full mr-2"></span>
                                 </div>
                             </div>
                         </motion.div>
