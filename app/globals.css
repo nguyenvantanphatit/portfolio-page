@@ -188,6 +188,13 @@ body {
   width: 350px;
   position: absolute;
 }
+.circle-svg-center {
+  margin: 0;
+  position: absolute;
+  top: 5%;
+  right: 65%;
+  z-index: 10000;
+}
 
 .absolute-center {
   margin: 0;
@@ -387,7 +394,7 @@ body {
 }
 
 .custom-spin-slow {
-  animation: spin-text 5s linear infinite;
+  animation: spin-text 10s linear infinite;
 }
 
 @keyframes spin-text {
