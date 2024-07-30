@@ -42,7 +42,7 @@ const Header = () => {
                 </div>
                 <div className="flex max-sm:flex-wrap max-sm:justify-between items-center">
                     <div className="md:relative">
-                        <svg style={{ top: `calc(5% + ${scrollPosition}px)` }} className="circle-svg custom-spin-slow circle-svg-center" viewBox="0 0 500 500">
+                        <svg style={{ top: `calc(5% + ${scrollPosition}px)`}} className="circle-svg custom-spin-slow circle-svg-center" viewBox="0 0 500 500">
                             <defs>
                                 <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle_top">
                                     <animateTransform attributeName="transform" begin="0s" dur="20s" type="rotate" from="0 250 250" to="360 250 250" repeatCount="indefinite" />
