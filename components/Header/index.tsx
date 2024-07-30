@@ -41,8 +41,8 @@ const Header = () => {
                     </div>
                 </div>
                 <div className="flex max-sm:flex-wrap max-sm:justify-between items-center">
-                    <div className="md:relative">
-                        <svg style={{ top: `calc(5% + ${scrollPosition}px)`}} className="circle-svg custom-spin-slow circle-svg-center" viewBox="0 0 500 500">
+                    <div className="md:relative block md:hidden">
+                        <svg style={{ top: `calc(5% + ${scrollPosition}px)` }} className="circle-svg custom-spin-slow circle-svg-center" viewBox="0 0 500 500">
                             <defs>
                                 <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle_top">
                                     <animateTransform attributeName="transform" begin="0s" dur="20s" type="rotate" from="0 250 250" to="360 250 250" repeatCount="indefinite" />
@@ -55,25 +55,20 @@ const Header = () => {
                             </text>
                         </svg>
                     </div>
-                    <div className="md:relative">
-                        <Image src="/images/banner/Logo.svg" width={150} height={150} className="custom-spin-slow hidden md:block" alt="Logo" />
-                        <a href="/#introduce" className="md:absolute md:left-8 md:top-12 rounded-full py-3 px-6 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm leading-6 transition-all duration-500 ">About</a>
+                    <div className="flex items-center gap-4 md:gap-8">
+                            <a href="/#introduce" className="rounded-full flex py-3 px-6 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-sm leading-6 transition-all duration-500 ">About
+                            {/* <Image src="/images/banner/Logo.svg" width={30} height={30} className="custom-spin-slow" alt="Logo" /> */}
+                            </a>
+                            <a href="/#skill" className="  rounded-full py-3 px-6 bg-indigo-600 hoverbg-indigo-700 text-white font-semibold text-sm leading-6 transition-all duration-500 ">Skills</a>
+                            <a href="/#projects" className="rounded-full py-3 px-6 bg-indigo-600 hoverbg-indigo-700 text-white font-semibold text-sm leading-6 transition-all duration-500 ">Projects</a>
                     </div>
-                    <div className="md:relative">
-                        <Image src="/images/banner/Logo.svg" width={150} height={150} className="custom-spin-slow hidden md:block" alt="Logo" />
-                        <a href="/#skill" className="md:absolute md:left-8 md:top-12 rounded-full py-3 px-6 bg-indigo-600 hoverbg-indigo-700 text-white font-semibold text-sm leading-6 transition-all duration-500 ">Skills</a>
-                    </div>
-                    <div className="md:relative">
-                        <Image src="/images/banner/Logo.svg" width={150} height={150} className="custom-spin-slow hidden md:block" alt="Logo" />
-                        <a href="/#projects" className="md:absolute md:left-6 md:top-12 rounded-full py-3 px-6 bg-indigo-600 hoverbg-indigo-700 text-white font-semibold text-sm leading-6 transition-all duration-500 ">Projects</a>
-                    </div>
-                    <div className="flex items-center justify-center mt-12 md:mt-0">
-                        <span className="loader"></span>
-                        <span className="loader"></span>
-                        <span className="loader"></span>
-                        <span className="loader"></span>
-                        <span className="loader"></span>
-                    </div>
+                        <div className="flex items-center justify-center ml-12 mt-12 md:mt-0">
+                            <span className="loader"></span>
+                            <span className="loader"></span>
+                            <span className="loader"></span>
+                            <span className="loader"></span>
+                            <span className="loader"></span>
+                        </div>
                 </div>
             </div>
         </section>
