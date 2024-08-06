@@ -29,25 +29,25 @@ const projects: Project[] = [
         role: "FE, BE",
         live_demo: "https://suckhoe.echomedi.com",
         desc: [
-            " A platform for updating internal information and working processes for employees.",
-        ],
-        sizeMember: 1
-
-    },
-    {
-        id: 2,
-        image: '/images/projects/luckyechomedi.png',
-        label: "Wheel Of Fortune",
-        time: "02/2024 - 2024",
-        tech: "NextJs, Tailwind CSS",
-        role: "FE, BE",
-        live_demo: "https://luckyechomedi.vercel.app",
-        desc: [
             "A blog dedicated to providing health care information and updates through engaging articles and resources.",
         ],
         sizeMember: 1
 
     },
+    // {
+    //     id: 2,
+    //     image: '/images/projects/luckyechomedi.png',
+    //     label: "Wheel Of Fortune",
+    //     time: "02/2024 - 2024",
+    //     tech: "NextJs, Tailwind CSS",
+    //     role: "FE, BE",
+    //     live_demo: "https://luckyechomedi.vercel.app",
+    //     desc: [
+    //         "A blog dedicated to providing health care information and updates through engaging articles and resources.",
+    //     ],
+    //     sizeMember: 1
+
+    // },
     {
         id: 3,
         image: '/images/projects/echomedi.png',
@@ -86,7 +86,7 @@ const projects: Project[] = [
         role: "FE, BE",
         live_demo: "https://www.vjp-connect.com",
         desc: [
-            " A platform specializing in promoting businesses, finding partners, and connecting experts between Vietnam and Japan across various fields using multilingual support with i18n.Utilizing ReactJS for the frontend, Node.js for the backend, MySQL for the database, and Ant Design for UI components.",
+            "A platform specializing in promoting businesses, finding partners, and connecting experts between Vietnam and Japan across various fields using multilingual support with i18n. Utilizing ReactJS for the frontend, Node.js for the backend, MySQL for the database, and Ant Design for UI components.",
         ],
         sizeMember: 4
     },
@@ -172,7 +172,7 @@ const Projects = () => {
                                     key={item.id}
                                     className="animate_top group relative rounded-2xl border border-stroke bg-white shadow-solid-10 dark:border-strokedark dark:bg-blacksection dark:shadow-none"
                                 >
-                                    <div className="block overflow-hidden h-1/2  rounded-t-2xl">
+                                    <div className="block overflow-hidden rounded-t-2xl">
                                         <img src={item.image} alt="Card image" className='object-cover' />
                                     </div>
                                     <div className="p-4">
