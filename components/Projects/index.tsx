@@ -178,7 +178,7 @@ const Projects = () => {
                                     <div className="p-4">
                                         <h4 className="text-base font-semibold text-gray-900 mb-[2px] capitalize transition-all duration-500">{item.label}</h4>
                                         <p className="text-sm font-normal text-gray-500 transition-all duration-500 leading-5 pb-2">{item.tech}</p>
-                                        <div className='flex items-center justify-between mb-8'>
+                                        <div className='flex items-center justify-between'>
                                             {item.live_demo && (
                                                 <button className="bg-white rounded-full py-2 px-5 text-xs text-[#4F46FF] font-semibold border border-[#4F46FF] hover:bg-indigo-700 hover:text-white">
                                                     <a href={item.live_demo}>
