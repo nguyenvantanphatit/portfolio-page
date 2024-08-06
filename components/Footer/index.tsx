@@ -2,20 +2,7 @@
 const Footer = () => {
     return (
         <>
-            <div className="timeline">
-                <div className="line"></div>
-            </div>
-           
             <div className="header h-60 md:h-[200px]">
-                <svg className="header__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1337.97 684.43">
-                    <path className="header__shape bigSquare" fill="#16d5d1" d="M546.519 349.271l86.383-56.098 56.097 86.383-86.383 56.098z" />
-                    <path className="header__shape triangle" fill="none" stroke="#ff4676" stroke-width="8" d="M372.15 462.17L321 434.58l-4.88 56.16z" />
-                    <circle className="header__shape bigCircle" fill="#ff4676" cx="1076.52" cy="262.17" r="59" />
-                    <path className="header__shape littleSquare" fill="#ffe430" d="M285.523 262.61l12.372-53.59 53.59 12.372-12.372 53.59z" />
-                    <circle className="header__shape hoop" fill="none" stroke="#ffe430" stroke-width="13" cx="905.52" cy="447.17" r="45" />
-                    <circle className="header__shape littleCircle" fill="#0f1c70" cx="1036.52" cy="203.17" r="27" />
-                </svg>
-                {/* <h3 className="header__title">Tan Phat</h3> */}
                 <footer className="w-full">
                 <div className="w-full max-w-7xl px-5 lg:px-8 mx-auto">
                     <div className="py-7">
@@ -46,7 +33,6 @@ const Footer = () => {
                             </div>
                             <div className="flex mt-4 space-x-4 sm:justify-center sm:mt-0 ">
                             </div>
-                            <h3 className="header__title">Tan Phat</h3>
                         </div>
                     </div>
                 </div>
