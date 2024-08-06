@@ -53,11 +53,13 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main>
+    <main className='bg-slate-50'>
+      <div className='max-w-7xl mx-auto'>
       <Introduce />
       <Skill />
       <Projects /> 
       <Contact />
+      </div>
     </main>
   );
 }

@@ -12,8 +12,12 @@ const projects: Project[] = [
         tech: "NextJs, NodeJs, Mysql, Tailwind CSS",
         role: "FE, BE",
         live_demo: "https://echomedi.com",
-        desc: "Ecommerce",
-        sizeMember: 3
+        desc: [
+            "Implemented Next.js and Tailwind CSS to develop an efficient and responsive UI that enhances the user experience for scheduling appointments, viewing test results, and purchasing products online.",
+            "Integrated VNPay and Momo for online payments to ensure a fast and secure payment process, providing reliable transactions for users.",
+            "Utilized FPT SMS Brandname to send OTPs for user authentication, improving security and user experience."
+        ],
+        sizeMember: 2
 
     },
     {
@@ -24,7 +28,9 @@ const projects: Project[] = [
         tech: "NextJs, NodeJs, Mysql, Tailwind CSS",
         role: "FE, BE",
         live_demo: "https://suckhoe.echomedi.com",
-        desc: "Echo Medi Blog using Nextjs, Tailwind Css, NodeJs",
+        desc: [
+            " A platform for updating internal information and working processes for employees.",
+        ],
         sizeMember: 1
 
     },
@@ -36,7 +42,9 @@ const projects: Project[] = [
         tech: "NextJs, Tailwind CSS",
         role: "FE, BE",
         live_demo: "https://luckyechomedi.vercel.app",
-        desc: "Wheel Of Fortune using Nextjs",
+        desc: [
+            "A blog dedicated to providing health care information and updates through engaging articles and resources.",
+        ],
         sizeMember: 1
 
     },
@@ -48,7 +56,11 @@ const projects: Project[] = [
         tech: "ReactJs, NodeJs, Mysql, Antd",
         role: "FE, BE",
         live_demo: "",
-        desc: "Manufacturing company department management software integrates drag and drop technology, real-time and other functions to help reduce manual work from Client, Staff, Product, Quotation, Purchase Order, Manufacturing and Payment.",
+        desc: [
+            "Using ReactJS and Ant Design (Antd) for the front end to build a user-friendly interface that manages client information, staff, products, quotations, purchase orders, production, and payments. The backend is powered by Node.js for handling API requests and MySQL for storing and managing all relevant data.",
+            "Leveraging socket.io to enable real-time tracking of quotations, monitor production progress, and notify purchase orders (PO) upon completion to facilitate timely delivery.",
+            "Implementing drag-and-drop technology for creating products and tasks, and enabling real-time chat between staff and purchase orders (PO) to enhance collaboration and efficiency"
+        ],
         sizeMember: 6
     },
     {
@@ -59,7 +71,10 @@ const projects: Project[] = [
         tech: "Angular, Antd",
         role: "FE",
         live_demo: "",
-        desc: "Gift code: ZaloPay, Fix UI, Hide and show history, lottery, form",
+        desc: [
+            "Use ZaloPay to process gift code promotions for customers, achieving seamless and efficient handling of promotional offers.",
+            "Using Angular to fix layout issues, implement hide and show features for history, and manage lottery features and forms, achieving an improved user experience and enhanced functionality",
+        ],
         sizeMember: 6
     },
     {
@@ -70,19 +85,22 @@ const projects: Project[] = [
         tech: "ReactJs, NodeJs, Mysql, Antd",
         role: "FE, BE",
         live_demo: "https://www.vjp-connect.com",
-        desc: "Connecting events for Japanese businesses using English, Vietnamese and Japanese",
+        desc: [
+            " A platform specializing in promoting businesses, finding partners, and connecting experts between Vietnam and Japan across various fields using multilingual support with i18n.Utilizing ReactJS for the frontend, Node.js for the backend, MySQL for the database, and Ant Design for UI components.",
+        ],
         sizeMember: 4
-
     },
     {
         id: 6,
         image: '/images/projects/portfoliopage.png',
         label: "Portfolio Page",
-        time: "07/2024",
+        time: "07/2024 - Present",
         tech: "NextJs, Tailwind CSS",
         role: "FE",
         live_demo: "https://portfolio-page-it.vercel.app",
-        desc: "Portfolio Page using NextJs app router",
+        desc: [
+            "Using Next.js, I built a responsive portfolio website to showcase my projects and skills.",
+        ],
         sizeMember: 1
     },
 ]
@@ -173,13 +191,30 @@ const Projects = () => {
                                                 <Modal
                                                     showCloseButton
                                                     visibleModal={showModal}
-                                                    wrapperClassName="!w-[340px] md:!w-[400px]"
+                                                    wrapperClassName="!w-[340px] md:!w-[1000px]"
                                                     contentClassName="!min-h-[0]"
                                                     onClose={() => setshowModal(false)}
                                                 >
                                                     <div>
                                                         <p className="text-2xl text-center mb-4 font-bold mt-2 text-[#4F46FF]">{selectedProject.label}</p>
-                                                        <p className="text-lg text-start px-4 w-[320px] md:w-[360px]">{selectedProject.desc}</p>
+                                                        <div className="text-lg text-start px-4 w-[320px] md:w-full mt-4">
+                                                            <p className="font-semibold">Duration: {selectedProject.time}</p>
+                                                            <p className="font-semibold">Team size: {selectedProject.sizeMember} members</p>
+                                                            <p className="font-semibold">Role: {selectedProject.role}</p>
+                                                        </div>
+                                                        <div className="text-lg text-start px-4 w-[320px] md:w-full">
+                                                            <p className="font-semibold">Technologies Used: {selectedProject.tech}</p>
+                                                        </div>
+                                                        <div className="text-lg text-start px-4 w-[320px] md:w-full">
+                                                            <p className="font-semibold">Project Description:</p>
+                                                            <ul className="list-disc list-inside">
+                                                                {selectedProject.desc.map((item, index) => (
+                                                                    <li className="text-justify" key={index}>{item}</li>
+                                                                ))}
+                                                            </ul>
+                                                        </div>
+
+                                                        
                                                     </div>
                                                 </Modal>
                                             )}

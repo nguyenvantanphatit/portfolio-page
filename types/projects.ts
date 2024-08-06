@@ -6,6 +6,6 @@ export type Project = {
   tech: string;
   role: string;
   live_demo: string;
-  desc: string;
+  desc: string[];
   sizeMember: number;
 };
