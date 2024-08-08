@@ -61,7 +61,7 @@ const projects: Project[] = [
             "Leveraging socket.io to enable real-time tracking of quotations, monitor production progress, and notify purchase orders (PO) upon completion to facilitate timely delivery.",
             "Implementing drag-and-drop technology for creating products and tasks, and enabling real-time chat between staff and purchase orders (PO) to enhance collaboration and efficiency"
         ],
-        sizeMember: 6
+        sizeMember: 3
     },
     {
         id: 4,
@@ -75,7 +75,7 @@ const projects: Project[] = [
             "Use ZaloPay to process gift code promotions for customers, achieving seamless and efficient handling of promotional offers.",
             "Using Angular to fix layout issues, implement hide and show features for history, and manage lottery features and forms, achieving an improved user experience and enhanced functionality",
         ],
-        sizeMember: 6
+        sizeMember: 4
     },
     {
         id: 5,
@@ -88,7 +88,7 @@ const projects: Project[] = [
         desc: [
             "A platform specializing in promoting businesses, finding partners, and connecting experts between Vietnam and Japan across various fields using multilingual support with i18n. Utilizing ReactJS for the frontend, Node.js for the backend, MySQL for the database, and Ant Design for UI components.",
         ],
-        sizeMember: 4
+        sizeMember: 2
     },
     {
         id: 6,
