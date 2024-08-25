@@ -1,8 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import Modal from "../Modal/Modal";
 import { Project } from "@/types/projects";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper'
+import 'swiper/css';
+import 'swiper/css/pagination';
 const projects: Project[] = [
     {
         id: 1,
@@ -18,10 +22,9 @@ const projects: Project[] = [
             "Utilized FPT SMS Brandname to send OTPs for user authentication, improving security and user experience."
         ],
         sizeMember: 2
-
     },
     {
-        id: 1,
+        id: 2, // sửa id trùng lặp
         image: '/images/projects/echomedi-blog.png',
         label: "Echo Medi Blog",
         time: "02/2024 - 2024",
@@ -32,22 +35,7 @@ const projects: Project[] = [
             "A blog dedicated to providing health care information and updates through engaging articles and resources.",
         ],
         sizeMember: 1
-
     },
-    // {
-    //     id: 2,
-    //     image: '/images/projects/luckyechomedi.png',
-    //     label: "Wheel Of Fortune",
-    //     time: "02/2024 - 2024",
-    //     tech: "NextJs, Tailwind CSS",
-    //     role: "FE, BE",
-    //     live_demo: "https://luckyechomedi.vercel.app",
-    //     desc: [
-    //         "A blog dedicated to providing health care information and updates through engaging articles and resources.",
-    //     ],
-    //     sizeMember: 1
-
-    // },
     {
         id: 3,
         image: '/images/projects/echomedi.png',
@@ -66,7 +54,7 @@ const projects: Project[] = [
     {
         id: 4,
         image: '/images/projects/dohbo.png',
-        label: "Dohbo Janpan",
+        label: "Dohbo Japan",
         time: "08/2023 - 10/2023",
         tech: "Angular, Antd",
         role: "FE",
@@ -103,9 +91,10 @@ const projects: Project[] = [
         ],
         sizeMember: 1
     },
-]
-const Projects = () => {
-    const detectMob = () => {
+];
+
+const Projects: React.FC = () => {
+    const detectMob = (): boolean => {
         const toMatch = [
             /Android/i,
             /webOS/i,
@@ -119,28 +108,20 @@ const Projects = () => {
         return toMatch.some((toMatchItem) => {
             return navigator.userAgent.match(toMatchItem);
         });
-    }
-    const [showLoadAllButton, setShowLoadAllButton] = useState(true);
-    const [showHideButton, setShowHideButton] = useState(false);
-    const [cnt, setCnt] = useState(detectMob() ? 2 : 4);
-    const handleLoadAll = () => {
-        setCnt(-1);
-        setShowLoadAllButton(false);
-        setShowHideButton(true);
     };
 
-    const handleHide = () => {
-        setCnt(detectMob() ? 2 : 8);
-        setShowLoadAllButton(true);
-        setShowHideButton(false);
-    };
-    const [showModal, setshowModal] = useState(false);
+    const [showModal, setShowModal] = useState<boolean>(false);
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+    const [isMobile, setIsMobile] = useState<boolean>(false);
 
-    const handleReadMore = (project: Project) => {
+    useEffect(() => {
+        setIsMobile(detectMob());
+    }, []);
+    const handleReadMore = (project: Project): void => {
         setSelectedProject(project);
-        setshowModal(true);
+        setShowModal(true);
     };
+
     return (
         <>
             <div className='bg-slate-50 pt-10' id="projects">
@@ -151,7 +132,6 @@ const Projects = () => {
                                 opacity: 0,
                                 x: 20,
                             },
-
                             visible: {
                                 opacity: 1,
                                 x: 0,
@@ -166,89 +146,102 @@ const Projects = () => {
                         <div className="mb-8 text-center">
                             <h1 className="text-4xl text-gray-900 text-center font-bold">Your Projects</h1>
                         </div>
-                        <div className="grid grid-cols-1 gap-6 xl:grid-cols-4">
-                            {projects.slice(0, cnt == -1 ? projects.length : cnt).map((item) => (
-                                <div
-                                    key={item.id}
-                                    className="animate_top group relative rounded-2xl border border-stroke bg-white shadow-solid-10 dark:border-strokedark dark:bg-blacksection dark:shadow-none"
-                                >
-                                    <div className="block overflow-hidden rounded-t-2xl">
-                                        <img src={item.image} alt="Card image" className='object-cover' />
-                                    </div>
-                                    <div className="p-4">
-                                        <h4 className="text-base font-semibold text-gray-900 mb-[2px] capitalize transition-all duration-500">{item.label}</h4>
-                                        <p className="text-sm font-normal text-gray-500 transition-all duration-500 leading-5 pb-2">{item.tech}</p>
-                                        <div className='flex items-center justify-between'>
-                                            {item.live_demo && (
-                                                <button className="bg-white rounded-full py-2 px-5 text-xs text-[#4F46FF] font-semibold border border-[#4F46FF] hover:bg-indigo-700 hover:text-white">
-                                                    <a href={item.live_demo}>
-                                                        Live Demo
-                                                    </a>
-                                                </button>
-                                            )}
-                                            <button onClick={() => handleReadMore(item)} className="bg-indigo-600 hover:bg-indigo-700 shadow-sm rounded-full py-2 px-5 text-xs text-white font-semibold">Read More</button>
-                                            {selectedProject && (
-                                                <Modal
-                                                    showCloseButton
-                                                    visibleModal={showModal}
-                                                    wrapperClassName="!w-[340px] md:!w-[1000px]"
-                                                    contentClassName="!min-h-[0]"
-                                                    onClose={() => setshowModal(false)}
-                                                >
-                                                    <div>
-                                                        <p className="text-2xl text-center mb-4 font-bold mt-2 text-[#4F46FF]">{selectedProject.label}</p>
-                                                        <div className="text-lg text-start px-4 w-[320px] md:w-full mt-4">
-                                                            <p className="font-semibold">Duration: {selectedProject.time}</p>
-                                                            <p className="font-semibold">Team size: {selectedProject.sizeMember} members</p>
-                                                            <p className="font-semibold">Role: {selectedProject.role}</p>
-                                                        </div>
-                                                        <div className="text-lg text-start px-4 w-[320px] md:w-full">
-                                                            <p className="font-semibold">Technologies Used: {selectedProject.tech}</p>
-                                                        </div>
-                                                        <div className="text-lg text-start px-4 w-[320px] md:w-full">
-                                                            <p className="font-semibold">Project Description:</p>
-                                                            <ul className="list-disc list-inside">
-                                                                {selectedProject.desc.map((item, index) => (
-                                                                    <li className="text-justify" key={index}>{item}</li>
-                                                                ))}
-                                                            </ul>
-                                                        </div>
-
-                                                        
-                                                    </div>
-                                                </Modal>
-                                            )}
+                        {isMobile ? (
+                            <Swiper
+                                slidesPerView={1.3}
+                                spaceBetween={20}
+                                pagination={{ clickable: true }}
+                                modules={[Pagination]}
+                                className="mySwiper slide"
+                            >
+                                {projects.map((item) => (
+                                    <SwiperSlide key={item.id} >
+                                        <div
+                                            className="animate_top group relative rounded-2xl border border-stroke bg-white shadow-solid-10 dark:border-strokedark dark:bg-blacksection dark:shadow-none"
+                                        >
+                                            <div className="block overflow-hidden rounded-t-2xl">
+                                                <img src={item.image} alt="Card image" className='object-cover w-full' />
+                                            </div>
+                                            <div className="p-4">
+                                                <h4 className="text-base font-semibold text-gray-900 mb-[2px] capitalize transition-all duration-500">{item.label}</h4>
+                                                <p className="text-sm font-normal text-gray-500 transition-all duration-500 leading-5 pb-2">{item.tech}</p>
+                                                <div className='flex items-center justify-between'>
+                                                    {item.live_demo && (
+                                                        <button className="bg-white rounded-full py-2 px-5 text-xs text-[#4F46FF] font-semibold border border-[#4F46FF] hover:bg-indigo-700 hover:text-white">
+                                                            <a href={item.live_demo}>
+                                                                Live Demo
+                                                            </a>
+                                                        </button>
+                                                    )}
+                                                    <button onClick={() => handleReadMore(item)} className="bg-indigo-600 hover:bg-indigo-700 shadow-sm rounded-full py-2 px-5 text-xs text-white font-semibold">Read More</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </SwiperSlide>
+                                ))}
+                            </Swiper>
+                        ) : (
+                            <div className="grid grid-cols-1 gap-6 xl:grid-cols-4">
+                                {projects.map((item) => (
+                                    <div
+                                        key={item.id}
+                                        className="animate_top group relative rounded-2xl border border-stroke bg-white shadow-solid-10 dark:border-strokedark dark:bg-blacksection dark:shadow-none"
+                                    >
+                                        <div className="block overflow-hidden rounded-t-2xl">
+                                            <img src={item.image} alt="Card image" className='object-cover' />
+                                        </div>
+                                        <div className="p-4">
+                                            <h4 className="text-base font-semibold text-gray-900 mb-[2px] capitalize transition-all duration-500">{item.label}</h4>
+                                            <p className="text-sm font-normal text-gray-500 transition-all duration-500 leading-5 pb-2">{item.tech}</p>
+                                            <div className='flex items-center justify-between'>
+                                                {item.live_demo && (
+                                                    <button className="bg-white rounded-full py-2 px-5 text-xs text-[#4F46FF] font-semibold border border-[#4F46FF] hover:bg-indigo-700 hover:text-white">
+                                                        <a href={item.live_demo}>
+                                                            Live Demo
+                                                        </a>
+                                                    </button>
+                                                )}
+                                                <button onClick={() => handleReadMore(item)} className="bg-indigo-600 hover:bg-indigo-700 shadow-sm rounded-full py-2 px-5 text-xs text-white font-semibold">Read More</button>
+                                            </div>
                                         </div>
                                     </div>
+                                ))}
+                            </div>
+                        )}
+                        {selectedProject && (
+                            <Modal
+                                showCloseButton
+                                visibleModal={showModal}
+                                wrapperClassName="!w-[340px] md:!w-[1000px]"
+                                contentClassName="!min-h-[0]"
+                                onClose={() => setShowModal(false)}
+                            >
+                                <div>
+                                    <p className="text-2xl text-center mb-4 font-bold mt-2 text-[#4F46FF]">{selectedProject.label}</p>
+                                    <div className="text-lg text-start px-4 w-[320px] md:w-full mt-4">
+                                        <p className="font-semibold">Duration: {selectedProject.time}</p>
+                                        <p className="font-semibold">Team size: {selectedProject.sizeMember} members</p>
+                                        <p className="font-semibold">Role: {selectedProject.role}</p>
+                                    </div>
+                                    <div className="text-lg text-start px-4 w-[320px] md:w-full">
+                                        <p className="font-semibold">Technologies Used: {selectedProject.tech}</p>
+                                    </div>
+                                    <div className="text-lg text-start px-4 w-[320px] md:w-full">
+                                        <p className="font-semibold">Project Description:</p>
+                                        <ul className="list-disc list-inside">
+                                            {selectedProject.desc.map((item, index) => (
+                                                <li className="text-justify" key={index}>{item}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
                                 </div>
-                            ))}
-                        </div>
-                        {showLoadAllButton && cnt !== projects.length && cnt !== -1 &&
-                            <div className="flex justify-center items-center mt-4 ">
-                                <button
-                                    type="button"
-                                    onClick={handleLoadAll}
-                                    className="rounded-2xl mt-2 border border-gray-200 bg-white px-4 py-2 group transition-all duration-500 transform hover:scale-105"
-                                >
-                                    Load All
-                                </button>
-                            </div>
-                        }
-                        {showHideButton &&
-                            <div className="flex justify-center mt-4">
-                                <button
-                                    type="button"
-                                    onClick={handleHide}
-                                    className="rounded-2xl mt-2 border border-gray-200 bg-white px-4 py-2 group transition-all duration-500 transform hover:scale-105"
-                                >
-                                    Hide
-                                </button>
-                            </div>
-                        }
+                            </Modal>
+                        )}
                     </motion.div>
                 </div>
             </div>
         </>
-    )
-}
+    );
+};
+
 export default Projects;
