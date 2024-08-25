@@ -39,7 +39,6 @@
     @apply max-h-[400px] overflow-y-scroll;
   }
 }
-
 @media (max-width: 1280px) {
   .navbar {
     @apply max-h-[400px];
@@ -190,7 +189,6 @@ body {
   width: 350px;
   position: absolute;
 }
-
 .circle-svg-center {
   margin: 0;
   position: absolute;
@@ -777,36 +775,102 @@ body {
 .ring1 {
   height: 20rem;
   width: 20rem;
+  animation: glow1 2.5s infinite;
 }
 
+@keyframes glow1 {
+  60% {
+    background-color: #ececec;
+  }
 
+  80% {
+    background-color: var(--golden-glow);
+  }
+
+  100% {
+    background-color: var(--golden-glow);
+  }
+}
 
 .ring2 {
   height: 16rem;
   width: 16rem;
+  animation: glow2 2.5s infinite;
 }
 
+@keyframes glow2 {
+  40% {
+    background-color: #ececec;
+  }
 
+  60% {
+    background-color: var(--golden-glow);
+  }
+
+  100% {
+    background-color: var(--golden-glow);
+  }
+}
 
 .ring3 {
   height: 12rem;
   width: 12rem;
+  animation: glow3 2.5s infinite;
 }
 
+@keyframes glow3 {
+  20% {
+    background-color: #ececec;
+  }
 
+  40% {
+    background-color: var(--golden-glow);
+  }
+
+  100% {
+    background-color: var(--golden-glow);
+  }
+}
 
 .ring4 {
   height: 8rem;
   width: 8rem;
+  animation: glow4 2.5s infinite;
 }
 
+@keyframes glow4 {
+  0% {
+    background-color: #ececec;
+  }
 
+  20% {
+    background-color: var(--golden-glow);
+  }
+
+  100% {
+    background-color: var(--golden-glow);
+  }
+}
 
 .ring5 {
   height: 4.5rem;
   width: 4.5rem;
+  animation: glow5 2.5s infinite;
 }
 
+@keyframes glow5 {
+  0% {
+    background-color: #ececec;
+  }
+
+  20% {
+    background-color: var(--golden-glow);
+  }
+
+  100% {
+    background-color: var(--golden-glow);
+  }
+}
 
 .choose-theme {
   margin-top: 5rem;
@@ -926,16 +990,4 @@ body {
   to {
     width: 100%;
   }
-}
-
-.slide .swiper-pagination-bullet {
-  @apply h-2 w-2 bg-[#EEEEEE] opacity-100;
-}
-
-.slide .swiper-pagination-bullet-active {
-  @apply w-3 rounded-full bg-[#156634];
-}
-
-.slide .swiper-pagination {
-  @apply relative pt-[20px];
 }
