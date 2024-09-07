@@ -1,15 +1,16 @@
 "use client"
 import React, { useEffect, useState } from 'react'
+const colors = [
+    '#ffad00',
+    '#01c5c4',
+    '#ffa5a5',
+    '#d789d7',
+    '#f09ae9',
+    '#e7305b',
+    '#303960'
+];
 export default function Introduce() {
-    const colors = [
-        '#ffad00',
-        '#01c5c4',
-        '#ffa5a5',
-        '#d789d7',
-        '#f09ae9',
-        '#e7305b',
-        '#303960'
-    ];
+ 
     const [colorIndex, setColorIndex] = useState(0);
 
     useEffect(() => {

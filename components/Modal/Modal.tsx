@@ -1,17 +1,6 @@
+import { ModalProps } from '@/types/modal';
 import { useRouter } from 'next/navigation';
 import React, { ReactNode } from 'react';
-
-interface ModalProps {
-  visibleModal: boolean;
-  wrapperClassName?: string;
-  contentClassName?: string;
-  bodyClassName?: string;
-  children: ReactNode;
-  onClose: () => void;
-  fill?: string;
-  showCloseButton?: boolean;
-}
-
 const Modal = ({
   visibleModal,
   wrapperClassName = "",

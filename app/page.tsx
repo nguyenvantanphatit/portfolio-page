@@ -3,7 +3,8 @@ import { Metadata } from "next";
 import Contact from "@/components/Contact";
 import Skill from "@/components/Skill";
 import Introduce from '@/components/Introduce';
-const Projects = dynamic(() => import('@/components/Projects'), { ssr: false });
+import Projects from '@/components/Projects';
+import "./globals.css";
 export const metadata: Metadata = {
   title: "Tấn Phát",
   description: "Tấn Phát Software Engineer",
