@@ -1,9 +1,11 @@
-
+import Head from "next/head";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
 import "./globals.css";
-import Head from "next/head";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 export default function RootLayout({
   children,
 }: {

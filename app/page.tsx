@@ -1,13 +1,8 @@
-import dynamic from 'next/dynamic';
 import { Metadata } from "next";
 import Contact from "@/components/Contact";
 import Skill from "@/components/Skill";
 import Introduce from '@/components/Introduce';
 import Projects from '@/components/Projects';
-import "./globals.css";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 export const metadata: Metadata = {
   title: "Tấn Phát",
   description: "Tấn Phát Software Engineer",
