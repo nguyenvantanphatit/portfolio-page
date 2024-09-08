@@ -4,9 +4,6 @@ import { motion } from "framer-motion";
 import GitHubCalendar from "react-github-calendar";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper';
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 import { detectMob } from '@/utils/detectMob';
 import { dataBrand } from '@/utils/data';
 

@@ -5,8 +5,6 @@ import Modal from "../Modal/Modal";
 import { Project } from "@/types/projects";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper'
-import 'swiper/css';
-import 'swiper/css/pagination';
 import { detectMob } from "@/utils/detectMob";
 import { dataProjects } from "@/utils/data";
 const Projects: React.FC = () => {
